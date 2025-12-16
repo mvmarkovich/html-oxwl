@@ -1,0 +1,80 @@
+.solutions
+    &__slider
+        overflow: hidden
+        padding: 0 20px
+        margin: * -20px
+
+    &__card
+        width: 295px
+        min-width: 295px
+        height: auto
+
+        &-inner
+            position: relative
+            border-radius: 15px
+            overflow: hidden
+            padding: 24px
+            border: @lg 1px solid transparent
+            height: 100%
+            min-height: 460px
+
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            transition: .4s
+
+            &.is-hover
+                border-color: @lg #192741
+
+                ^^&-bg--wrap
+                    opacity: @lg 0
+
+                ^^&-title
+                    color: @lg #192741
+
+                ^^&-icon
+                    path
+                        fill: @lg #192741
+
+                ^^&-text
+                    margin-top: @lg 28px
+
+        &-bg
+            size: 100%
+            object-fit: cover
+            object-position: center
+
+            &--wrap
+                position: absolute 0 null null 0
+                size: 100%
+                z-index: -1
+                transition: .4s
+
+                &:before
+                    content: ''
+                    position: absolute 0
+                    background: rgba(25, 39, 65, 0.7)
+                    z-index: 1
+
+        &-icon
+            width: 36px
+            max-width: 36px
+            margin-bottom: 28px
+
+            path
+                transition: .4s
+
+        &-title
+            color: #fff
+            text: 700 22px 1
+            letter-spacing: -0.03em
+            transition: .4s
+
+        &-text
+            color: #fff @lg #818793
+            text: 16px
+            margin-top: 28px @lg 0
+            opacity: @lg 0
+            max-height: @lg 0
+            transition: @lg .4s opacity, .4s max-height
+           

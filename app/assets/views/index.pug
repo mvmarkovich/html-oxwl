@@ -1,0 +1,583 @@
+extends layouts/layout.pug
+
+block title
+    title Main | OXWL
+
+block content
+    section.section.section--full-width
+        .banner
+            .container
+                .banner__media
+                    img.banner__media-img(src="img/content/banner/card_0.webp" width="1920" height="900" alt="Title banner")
+
+                .banner__body
+                    h1.banner__title Строительство быстровозводимых зданий из металлоконструкций
+                    .banner__text.text <nobr>Производственно-строительная</nobr> компания на базе Подольского завода металлоконструкций
+
+                    .banner__actions
+                        button.btn.btn--light.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Получить консультацию
+
+    section.section
+        .section__head
+            .section__label Услуги
+
+            h2.section__title 
+                | Комплексные решения
+                br
+                span для Вашего бизнеса
+
+        .solutions
+            .solutions__slider
+                .swiper-wrapper
+                    .solutions__card.swiper-slide
+                        .solutions__card-inner
+                            .solutions__card-bg--wrap
+                               img.solutions__card-bg(src="img/content/solutions/bg_0.webp" width="295" height="460" alt="Bg card") 
+
+                            .solutions__card-icon
+                                include ../img/content/solutions/icon_0.svg
+
+                            .solutions__card-title Исходно-разрешительная документация
+
+                            .solutions__card-text Наша компания оказывает полный комплекс услуг по подготовке и оформлению исходно-разрешительной документации для строительства и реконструкции объектов. Мы берем на себя все этапы — от сбора необходимых данных до получения всех согласований и разрешений.
+
+                    .solutions__card.swiper-slide
+                        .solutions__card-inner
+                            .solutions__card-bg--wrap
+                               img.solutions__card-bg(src="img/content/solutions/bg_1.webp" width="295" height="460" alt="Bg card") 
+
+                            .solutions__card-icon
+                                include ../img/content/solutions/icon_1.svg
+
+                            .solutions__card-title Генеральный подрядчик в проектировании
+
+                            .solutions__card-text Наша компания предлагает полный спектр услуг в области проектирования металлоконструкций. Мы берем на себя роль генерального подрядчика, обеспечивая комплексный подход — от разработки проектной документации до реализации строительства.
+
+                    .solutions__card.swiper-slide
+                        .solutions__card-inner
+                            .solutions__card-bg--wrap
+                               img.solutions__card-bg(src="img/content/solutions/bg_2.webp" width="295" height="460" alt="Bg card") 
+
+                            .solutions__card-icon
+                                include ../img/content/solutions/icon_2.svg
+
+                            .solutions__card-title Производство и поставка металлоконструкций
+
+                            .solutions__card-text Мы специализируемся на изготовлении металлоконструкций любой сложности. Используем современное оборудование и высококачественные материалы, чтобы обеспечить надежность и долговечность наших изделий.
+
+                    .solutions__card.swiper-slide
+                        .solutions__card-inner
+                            .solutions__card-bg--wrap
+                               img.solutions__card-bg(src="img/content/solutions/bg_3.webp" width="295" height="460" alt="Bg card") 
+
+                            .solutions__card-icon
+                                include ../img/content/solutions/icon_3.svg
+
+                            .solutions__card-title Генеральный подрядчик в строительстве
+
+                            .solutions__card-text Наша компания — надежный генеральный подрядчик, специализирующийся на строительстве быстровозводимых зданий из металлоконструкций с 2004 года. Мы берем на себя полный цикл работ: от проектирования и изготовления конструкций до монтажа и сдачи объекта "под ключ".
+
+    section.section
+        .feedback
+            .feedback__row
+                .feedback__info
+                    h2.feedback__title Онлайн расчет стоимости вашего объекта
+                    .feedback__text.text Учтем ваши пожелания. Сделаем индивидуальный проект. <br /> Предоставим смету.
+
+                    .feedback__img--wrap
+                        img.feedback__img(src="img/content/feedback/option_0.webp" width="1296" height="729" alt="Title feedback")
+
+                form.feedback__form(action="/.php" method="POST")
+                    .input
+                        .input__label Выберите объект
+
+                        .select
+                            input.select__input(type="hidden" name="object")
+                            .select__btn
+
+                            .select__dropdown.select__dropdown--hide
+                                .select__dropdown-option(data-value="0") Промышленное здание
+                                .select__dropdown-option(data-value="1") Elem 2
+                                .select__dropdown-option(data-value="2") Elem 3
+
+                    .input
+                        .input__label Выберите площадь
+
+                        .select
+                            input.select__input(type="hidden" name="area")
+                            .select__btn
+
+                            .select__dropdown.select__dropdown--hide
+                                .select__dropdown-option(data-value="0") 2000 - 5000 м2
+                                .select__dropdown-option(data-value="1") Elem 2
+                                .select__dropdown-option(data-value="2") Elem 3
+
+                    label.input
+                        .input__label Введите вашу почту *
+                        input.input__elem(type="text" name="email" placeholder="E-mail")
+
+                    label.input
+                        .input__label Введите ваш телефон *
+                        input.input__elem(type="text" name="phone" placeholder="+7 (000) 000-00-00")
+
+                    .input
+                        .input__label Когда вам позвонить ?
+                        input.input__elem.input__elem--date(type="text" name="time" placeholder="Выберите время и дату")
+
+                    label.input.form__agree 
+                        input.input__checkbox(type="checkbox" name="agree") 
+                        .input__checkbox-label Нажимая на кнопку, Вы соглашаетесь на <a href="https://baumix.ru/soglasie/" target="_blank">обработку персональных данных</a>
+
+                    .form__footer
+                        button.btn.btn--light.btn--arrow-right.form__send(type="submit" aria-label="Send form") Заказать расчет
+
+    section.section
+        .section__head
+            .section__label Виды строительства
+
+            h2.section__title 
+                | Строительство современных 
+                br
+                span складских комплексов
+
+        .species
+            .species__slider
+                .swiper-wrapper
+                    .species__card.swiper-slide
+                        .species__card-inner
+                            .species__card-bg--wrap
+                               img.species__card-bg(src="img/content/species/bg_0.webp" width="295" height="460" alt="Bg card") 
+
+                            .glass.species__card-info
+                                .glass-filter
+                                .glass-overlay
+                                .glass-specular
+
+                                .glass-content
+                                    .species__card-title Склады и складские комплексы
+                                    .species__card-text.text Профессиональное строительство быстровозводимых зданий.
+                                    a.btn.btn--reset.btn--text-light.btn--arrow-right(href="#") Перейти 
+
+                    .species__card.swiper-slide
+                        .species__card-inner
+                            .species__card-bg--wrap
+                               img.species__card-bg(src="img/content/species/bg_1.webp" width="295" height="460" alt="Bg card") 
+
+                            .glass.species__card-info
+                                .glass-filter
+                                .glass-overlay
+                                .glass-specular
+
+                                .glass-content
+                                    .species__card-title Производственные и сельскохозяйственные комплексы
+                                    .species__card-text.text Профессиональное строительство быстровозводимых зданий.
+                                    a.btn.btn--reset.btn--text-light.btn--arrow-right(href="#") Перейти 
+
+                    .species__card.swiper-slide
+                        .species__card-inner
+                            .species__card-bg--wrap
+                               img.species__card-bg(src="img/content/species/bg_2.webp" width="295" height="460" alt="Bg card") 
+
+                            .glass.species__card-info
+                                .glass-filter
+                                .glass-overlay
+                                .glass-specular
+
+                                .glass-content
+                                    .species__card-title Логистические центры
+                                    .species__card-text.text Профессиональное строительство быстровозводимых зданий.
+                                    a.btn.btn--reset.btn--text-light.btn--arrow-right(href="#") Перейти 
+
+                    .species__card.swiper-slide
+                        .species__card-inner
+                            .species__card-bg--wrap
+                               img.species__card-bg(src="img/content/species/bg_3.webp" width="295" height="460" alt="Bg card") 
+
+                            .glass.species__card-info
+                                .glass-filter
+                                .glass-overlay
+                                .glass-specular
+
+                                .glass-content
+                                    .species__card-title Торговые центры
+                                    .species__card-text.text Профессиональное строительство быстровозводимых зданий.
+                                    a.btn.btn--reset.btn--text-light.btn--arrow-right(href="#") Перейти 
+
+                    .species__card.swiper-slide
+                        .species__card-inner
+                            .species__card-bg--wrap
+                               img.species__card-bg(src="img/content/species/bg_4.webp" width="295" height="460" alt="Bg card") 
+
+                            .glass.species__card-info
+                                .glass-filter
+                                .glass-overlay
+                                .glass-specular
+
+                                .glass-content
+                                    .species__card-title Промышленные комплексы
+                                    .species__card-text.text Профессиональное строительство быстровозводимых зданий.
+                                    a.btn.btn--reset.btn--text-light.btn--arrow-right(href="#") Перейти        
+
+    section.section.section--full-width
+        .banner
+            .container.-flex-end-
+                .banner__media
+                    img.banner__media-img(src="img/content/banner/card_1.webp" width="1920" height="900" alt="Title banner")
+
+                .banner__body
+                    .banner__textarea
+                        h2 Мы построили > 200 объектов площадью 1,5 млн м²
+
+                    .banner__actions
+                        button.btn.btn--light.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Получить консультацию
+
+    section.section
+        .section__head
+            h2.section__title 
+                | Оксвел - 
+                span надёжный партнёр
+                
+        .benefits
+            .benefits__slider
+                .swiper-wrapper
+                    .benefits__card.swiper-slide
+                        .benefits__card-inner
+                            .benefits__card-img--wrap
+                                picture
+                                    source(srcset="img/content/benefits/card_0.webp" media="(min-width: 1025px)")
+                                    img(src="img/content/benefits/icon_0.svg" alt="Title card")
+
+                            .benefits__card-info
+                                .benefits__card-title Оптимизация бюджета
+                                .benefits__card-text.text Мы заключаем с Заказчиком контракт с фиксированной ценой (FPC), предусматривающий неизменную стоимость работ на всех этапах. Договор гарантирует оплату строго за оговорённый объём работ, выполненных в установленные сроки. Изменение цены возможно только при пересмотре объёма работ.
+
+                    .benefits__card.swiper-slide
+                        .benefits__card-inner
+                            .benefits__card-img--wrap
+                                picture
+                                    source(srcset="img/content/benefits/card_1.webp" media="(min-width: 1025px)")
+                                    img(src="img/content/benefits/icon_1.svg" alt="Title card")
+
+                            .benefits__card-info
+                                .benefits__card-title Гарантированные сроки
+                                .benefits__card-text.text Соблюдаем график, минимизируя задержки. За простои несем финансовую ответственность.
+                            
+                    .benefits__card.swiper-slide
+                        .benefits__card-inner
+                            .benefits__card-img--wrap
+                                picture
+                                    source(srcset="img/content/benefits/card_2.webp" media="(min-width: 1025px)")
+                                    img(src="img/content/benefits/icon_2.svg" alt="Title card")
+
+                            .benefits__card-info
+                                .benefits__card-title Разрешения и допуски
+                                .benefits__card-text.text Состоим в Национальном объединение строителей, имеем допуски на строительные, высотные и опасные работы.
+
+                    .benefits__card.swiper-slide
+                        .benefits__card-inner
+                            .benefits__card-img--wrap
+                                picture
+                                    source(srcset="img/content/benefits/card_3.webp" media="(min-width: 1025px)")
+                                    img(src="img/content/benefits/icon_3.svg" alt="Title card")
+
+                            .benefits__card-info
+                                .benefits__card-title Надёжность и качество
+                                .benefits__card-text.text Выполняем 95% строительных и проектных работ силами нашей компании, привлекая только проверенных подрядчиков. Качество на каждом этапе гарантировано.
+
+    section.section
+        .hero
+            .hero__group
+                .hero__info
+                    h2.hero__title Объект «под ключ»
+                    .hero__text.text Важно правильно выбрать исполнителя, который реализует проект в соответствии с нормами, стандартами, требованиями и пожеланиями заказчика.
+
+                    .hero__actions
+                        button.btn.btn--light.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Рассчитать стоимость
+
+    section.section
+        .company-offer
+            .company-offer__row
+                .company-offer__col
+                    .company-offer__card
+                        .company-offer__card-inner
+                            .company-offer__card-icon--wrap
+                                img.company-offer__card-icon(src="img/content/company-offer/icon_0.svg" width="36" height="36" alt="Title card")
+
+                            h2.company-offer__card-title Соблюдаем все технологии строительства
+                            .company-offer__card-text.text ОКСВЕЛ — ведущая производственно-строительная компания, работающая на базе Подольского завода металлоконструкций. Более 20 лет мы являемся надежным партнером в реализации сложных и масштабных проектов. За годы работы компания произвела более 2 млн тонн металлоконструкций и успешно реализовала свыше 200 объектов на основе металлического каркаса.
+
+                .company-offer__col
+                    .company-offer__group
+                        .company-offer__card
+                            .company-offer__card-inner
+                                h3.company-offer__card-headline
+                                    span до
+                                    | 30%
+
+                                .company-offer__card-text.text Экономии бюджета
+
+                        .company-offer__card
+                            .company-offer__card-inner
+                                h3.company-offer__card-headline
+                                    span до
+                                    | 50%
+
+                                .company-offer__card-text.text Экономии времени
+
+                    .company-offer__card
+                        .company-offer__card-inner
+                            h3.company-offer__card-headline от 28 000 ₽/м²
+                            .company-offer__card-text.text Предлагаем полный комплекс услуг по проектированию, изготовлению конструкций и строительству «под ключ». Мы используем современные материалы, оборудование и технологии, опираемся на собственный и мировой опыт быстровозводимого строительства. К нам обращаются организации из самых разных сфер. Наши преимущества: эффективные рабочие процессы, продукция с высокой надежностью, индивидуальный подход с персональными ценовыми предложениями.
+
+    section.section
+        .section__head
+            .section__label Выполненные проекты
+            
+            h2.section__title 
+                | Мы построили 
+                span более 200 объектов
+
+        //- .cases
+        //-     .cases__tabs
+        //-         ul.cases__tabs-list
+        //-             li.cases__tabs-item
+        //-                 button.btn.btn--reset.cases__tabs-btn(data-tab="all" aria-label="Toggle tab") Все
+
+        //-             li.cases__tabs-item
+        //-                 button.btn.btn--reset.cases__tabs-btn(aria-label="Toggle tab") Промышленные здания
+
+        //-             li.cases__tabs-item
+        //-                 button.btn.btn--reset.cases__tabs-btn(aria-label="Toggle tab") Складские комплексы
+
+        //-             li.cases__tabs-item
+        //-                 button.btn.btn--reset.cases__tabs-btn(aria-label="Toggle tab") Торговые здания
+
+        //-             li.cases__tabs-item
+        //-                 button.btn.btn--reset.cases__tabs-btn(aria-label="Toggle tab") Автосервисы и СТО
+
+    section.section
+        .section__head.section__head--row
+            h2.section__title 
+                | Наш опыт - 
+                span надежность, подтверждена цифрами
+
+            .section__text.text Работа на базе Подольского завода металлоконструкций позволяет нам гарантировать высокое качество продукции и соблюдение сроков.
+
+        .stats
+            .stats__slider
+                .swiper-wrapper
+                    .stats__card.swiper-slide
+                        .stats__card-inner
+                            .stats__card-title 20+
+                            .stats__card-text.text Лет опыта <br /> работы
+
+                    .stats__card.swiper-slide
+                        .stats__card-inner
+                            .stats__card-title 200+
+                            .stats__card-text.text Реализованных <br /> проектов
+
+                    .stats__card.swiper-slide
+                        .stats__card-inner
+                            .stats__card-title 1,5
+                            .stats__card-text.text Млн. т <br /> произведенных конструкций
+
+                    .stats__card.swiper-slide
+                        .stats__card-inner
+                            .stats__card-title 4 500
+                            .stats__card-text.text М² собственная <br /> производственно-<br />складская база
+
+    section.section
+        .hero
+            .hero__group
+                .hero__info
+                    h2.hero__title Консультация специалиста
+                    .hero__text.text Важно правильно выбрать исполнителя, который реализует проект в соответствии с нормами, стандартами, требованиями и пожеланиями заказчика.
+
+                    .hero__actions
+                        button.btn.btn--light.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Рассчитать стоимость
+
+    section.section
+        .section__head.section__head--row
+            h2.section__title 
+                | Наши здания используют 
+                span крупнейшие компании России
+
+            .section__text.text Каждый проект для нас — это уникальная задача. Мы учитываем все пожелания заказчика, предлагая оптимальные технические и экономические решения.
+
+        .partners
+            .partners__slider
+                .swiper-wrapper
+                    .partners__card.swiper-slide
+                        .partners__card-inner
+                            .partners__card-img--wrap
+                                img.partners__card-img(src="img/content/partners/card_0.svg" width="138" height="95" alt="Name partner")
+
+                    .partners__card.swiper-slide
+                        .partners__card-inner
+                            .partners__card-img--wrap
+                                img.partners__card-img(src="img/content/partners/card_1.svg" width="97" height="71" alt="Name partner")
+
+                    .partners__card.swiper-slide
+                        .partners__card-inner
+                            .partners__card-img--wrap
+                                img.partners__card-img(src="img/content/partners/card_2.svg" width="114" height="25" alt="Name partner")
+
+                    .partners__card.swiper-slide
+                        .partners__card-inner
+                            .partners__card-img--wrap
+                                img.partners__card-img(src="img/content/partners/card_3.svg" width="114" height="25" alt="Name partner")
+
+                    .partners__card.swiper-slide
+                        .partners__card-inner
+                            .partners__card-img--wrap
+                                img.partners__card-img(src="img/content/partners/card_4.svg" width="114" height="35" alt="Name partner")
+
+                    .partners__card.swiper-slide
+                        .partners__card-inner
+                            .partners__card-img--wrap
+                                img.partners__card-img(src="img/content/partners/card_5.svg" width="114" height="25" alt="Name partner")
+
+                    .partners__card.swiper-slide
+                        .partners__card-inner
+                            .partners__card-img--wrap
+                                img.partners__card-img(src="img/content/partners/card_6.svg" width="138" height="95" alt="Name partner")
+
+                    .partners__card.swiper-slide
+                        .partners__card-inner
+                            .partners__card-img--wrap
+                                img.partners__card-img(src="img/content/partners/card_7.svg" width="138" height="95" alt="Name partner")
+
+    section.section
+        .section__head
+            h2.section__title 
+                | Популярные вопросы,
+                <br />
+                span которые задают нашим специалистам
+
+        .faq
+            .faq__list
+                .faq__item
+                    button.btn--reset.faq__btn.js-acc(aria-expanded="true" aria-label="Toggle acc") Какая стоимость строительства быстровозводимых зданий? Можно ли сразу понять, сколько обойдется 1 м²?
+                    
+                    .faq__content
+                        p Стоимость строительства зависит от множества факторов: типа здания (склад, производственный цех и тд), используемых материалов, сложности проекта, региона строительства и дополнительных опций (утепление, вентиляция и т. д.).
+                        p Ориентировочная цена за 1 м² начинается от 28 000 руб. (уточняется после анализа ТЗ). Однако точную стоимость можно рассчитать только после разработки проекта или предварительного расчета на основе ваших требований.
+
+                .faq__item
+                    button.btn--reset.faq__btn.js-acc(aria-expanded="false" aria-label="Toggle acc") Нужна ли проектная документация, ведь это не капитальное строительство?
+                    
+                    .faq__content
+                        p Да, проектная документация необходима даже для быстровозводимых зданий. Она обеспечивает:
+        
+                        ul
+                            li Безопасность – правильный расчет нагрузок, ветровых и снеговых воздействий.
+                            li Соответствие нормам – соблюдение СНиП, ГОСТ и других требований.
+                            li Оптимизацию затрат – исключение перерасхода материалов.
+                            li Наша компания разрабатывает полный пакет документов, включая чертежи, спецификации и расчеты.
+
+                .faq__item
+                    button.btn--reset.faq__btn.js-acc(aria-expanded="false" aria-label="Toggle acc") За сколько по времени можно построить быстровозводимое здание?
+                    
+                    .faq__content
+                        p Сроки зависят от сложности объекта:
+
+                        ul 
+                            li Небольшой склад (до 500 м²) – от 3–4 недели.
+                            li Промышленный цех (1000–5000 м²) – от 1,5–3 месяца.
+                            li Индивидуальные проекты (с дополнительными коммуникациями) – от 6 месяцев.
+
+                        p Мы используем модульные технологии, что ускоряет процесс в 2–3 раза по сравнению с традиционным строительством.
+
+                .faq__item
+                    button.btn--reset.faq__btn.js-acc(aria-expanded="false" aria-label="Toggle acc") Нужно ли разрешение на строительство, если здание не капитальное?
+
+                    .faq__content
+                        p Для некапитальных зданий разрешение на строительство не требуется.
+
+                        p Согласно пункту 10.2 ГрК РФ ст.1 №342-ФЗ от 03.08.2018 г. некапитальные зданий и сооружения признаются здания, которые не имеют прочной связи с землей и конструктивные характеристики которых позволяют осуществить их перемещение, демонтаж и последующую сборку без неизмеримого ущерба назначению и без изменения основных характеристик сооружений.
+
+                        p Риски – отсутствие разрешения на объект, признанный капитальным, влечет снос по решению суда (ст. 222 ГК РФ).
+
+                .faq__item
+                    button.btn--reset.faq__btn.js-acc(aria-expanded="false" aria-label="Toggle acc") Ваша компания выполняет фундаментные работы? Как понять, какой нужен фундамент?
+                    
+                    .faq__content
+                        p Да, мы выполняем все этапы строительства, включая фундаментные работы. Тип фундамента зависит от:
+                    
+                        ul
+                            li Грунта (геологические изыскания);
+                            li Нагрузки (вес здания, оборудование);
+                            li Климатических условий.
+
+                        p Чаще всего применяются:
+
+                        ul
+                            li Ленточный – для небольших зданий с равномерной нагрузкой;
+                            li Свайный – на участках с активными грунтовыми водами, на песчаном, заболоченном, торфяном и слабом грунте;
+                            li Столбчатый – для легких каркасных конструкций и временных сооружений на устойчивых грунтах.
+                            li Монолитная плита - цельная железобетонная основа для слабых, пучинистых грунтов, зон с высокими грунтовыми водами, сейсмической активностью или сооружений без подвала.
+
+                        p 
+                            | Мы проводим анализ всех факторов и подбираем оптимальный вариант фундамента для вашего объекта.
+                            <br />
+                            | Нужна консультация по выбору фундамента? Оставьте заявку - наши специалисты бесплатно помогут с расчетами!
+
+    section.section
+        .section__head
+            h2.section__title 
+                | Услуги компании 
+                span Оксвел
+
+        .services
+            .services__slider
+                .swiper-wrapper
+                    .services__card.swiper-slide
+                        .services__card-inner
+                            .services__card-bg--wrap
+                                img.services__card-bg(src="img/content/services/bg_0.webp" width="295" height="460" alt="Bg card") 
+
+                            .services__card-title Устройство фундамента
+
+                            .services__card-actions
+                                button.btn.btn--light.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Оставить заявку
+
+                    .services__card.swiper-slide
+                        .services__card-inner
+                            .services__card-bg--wrap
+                                img.services__card-bg(src="img/content/services/bg_1.webp" width="295" height="460" alt="Bg card") 
+
+                            .services__card-title Изготовление металлоконструкций
+
+                            .services__card-actions
+                                button.btn.btn--light.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Оставить заявку
+
+                    .services__card.swiper-slide
+                        .services__card-inner
+                            .services__card-bg--wrap
+                                img.services__card-bg(src="img/content/services/bg_2.webp" width="295" height="460" alt="Bg card") 
+
+                            .services__card-title Монтаж сэндвич-панелей
+
+                            .services__card-actions
+                                button.btn.btn--light.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Оставить заявку
+                        
+    section.section.section--full-width
+        .banner
+            .container
+                .banner__media
+                    img.banner__media-img(src="img/content/banner/card_2.webp" width="1920" height="900" alt="Title banner")
+
+                .banner__body
+                    .banner__textarea
+                        h2 О компании ОКСВЕЛ
+
+                        p ОКСВЕЛ — ведущая производственно-строительная компания, работающая на базе Подольского завода металлоконструкций. С момента основания, а это более 20 лет назад, мы зарекомендовали себя как надежный партнер в реализации сложных и масштабных проектов. За годы работы компания произвела более 2 млн тонн металлоконструкций и успешно реализовала свыше 200 объектов на основе металлического каркаса. 
+
+                        h3 История и опыт
+
+                        p ОКСВЕЛ начинал свою деятельность как специализированное предприятие, ориентированное на производство металлоконструкций. Благодаря глубокой экспертизе, современному оборудованию и слаженной работе команды, компания быстро вышла на новый уровень, расширив спектр услуг до полного цикла в строительстве. Сегодня мы объединяем многолетний опыт, инновационные технологии и индивидуальный подход к каждому проекту. 
+
+                            
+
+
+

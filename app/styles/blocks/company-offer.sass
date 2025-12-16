@@ -1,0 +1,63 @@
+.company-offer
+    &__row
+        display: @lg flex
+        flex-wrap: @lg wrap
+        margin: 0 -10px
+        margin-bottom: -10px @md -20px
+
+    &__col
+        width: @lg 50%
+        display: @lg flex
+        flex-direction: @lg column
+
+    &__group
+        display: flex
+        flex-wrap: wrap
+
+        ^&__card
+            width: 100% @sm 50%
+
+            &-inner
+                background: #192741
+                padding: 32px
+
+            &-headline
+                color: #fff
+
+            &-text
+                color: #818793
+                margin: 20px 0 0
+
+    &__card
+        flex: @lg 1
+        padding: 0 10px
+        margin-bottom: 10px @md 20px
+
+        &-inner
+            background: #f6f8fa
+            border-radius: 15px
+            height: 100%
+            padding: 32px @md 40px
+
+        &-icon
+            &--wrap
+                max-width: 36px
+                width: 36px
+                margin-bottom: 20px
+
+        &-title
+            margin-bottom: 24px
+            max-width: 312px
+
+        &-headline
+            text: 26px @md 32px
+            margin-bottom: 10px
+
+            span
+                text: 400 16px 1
+                letter-spacing: -0.03em
+                margin-right: 10px
+
+        &-text
+            color: rgba(25, 39, 65, .7)
+            margin: 0

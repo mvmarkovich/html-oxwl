@@ -1,0 +1,74 @@
+#footer-map
+
+footer.footer#footer
+    .container.footer__container 
+        .footer__main
+            .footer__col
+                a.footer__logo(href="./")
+                    img(src="img/icons/logo.svg" width="230" height="50" alt="Оксвел") 
+
+                .footer__group
+                    .footer__group-col
+                        .commun.footer__commun
+                            a.commun__link.commun__link--phone(href="tel:+74957890370" target="Позвонить по: +7 (495) 789 03 70") +7 (495) 789 03 70
+                            a.commun__link.commun__link--email(href="mailto:mail@oxwl.ru" target="Написать: mail@oxwl.ru") mail@oxwl.ru
+                            .commun__link.commun__link--loc г. Подольск Ремонтный проезд д. 6
+                            .commun__link.commun__link--time Пн-пт 09:00 - 18:00
+
+                        .social.footer__social
+                            a.social__link.social__link--tg(href="https://t.me/oxwl2004" target="_blank" title="Перейти в Telegram")
+                            a.social__link.social__link--rb(href="https://rutube.ru/channel/58294412/" target="_blank" title="Перейти в Rutube")
+
+                    .footer__group-col
+                        nav.footer__nav(aria-label="Main navigation")
+                            ul.footer__nav-list
+                                li.footer__nav-item
+                                    a.footer__nav-link(href="#") Документы
+
+                                li.footer__nav-item
+                                    a.footer__nav-link(href="#") Реализованные объекты
+
+                                li.footer__nav-item
+                                    a.footer__nav-link(href="#") Вопросы
+
+                                li.footer__nav-item
+                                    a.footer__nav-link(href="#") О компании
+
+                                li.footer__nav-item
+                                    a.footer__nav-link(href="#") Контакты
+
+            .footer__feedback
+                .footer__feedback-title Обратный звонок
+                .footer__feedback-text Оставьте заявку и мы свяжемся с Вами в ближайшее время
+
+                form.footer__feedback-form(action="/.php" method="POST")
+                    .footer__feedback-group
+                        label.input
+                            .input__label Ваше имя *
+                            input.input__elem(type="text" name="email" placeholder="Ваше имя")
+
+                        label.input
+                            .input__label Введите ваш телефон *
+                            input.input__elem(type="text" name="phone" placeholder="+7 (000) 000-00-00")
+                        
+                    label.input.form__agree 
+                        input.input__checkbox(type="checkbox" name="agree") 
+                        .input__checkbox-label Нажимая на кнопку, Вы соглашаетесь на <a href="https://baumix.ru/soglasie/" target="_blank">обработку персональных данных</a>
+
+                    .form__footer
+                        button.btn.btn--light.btn--arrow-right.form__send(type="submit" aria-label="Send form") Оставить заявку
+
+        .footer__copy
+            .footer__copy-links
+                a(href="#") Политика конфиденциальности
+                a(href="#") Карта сайта
+
+            .footer__copy-texts
+                p Все права защищены ©
+
+
+
+
+
+
+                

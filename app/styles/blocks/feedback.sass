@@ -1,0 +1,55 @@
+.feedback
+    position: relative
+    z-index: 1
+    overflow: hidden
+    background: #192741
+    border-radius: 15px
+    padding: 32px @md 48px
+
+    &:before
+        content: ''
+        size: 970px 1005px @lg 64% 100%
+        position: absolute
+        top: 50% @lg 4px
+        left: 50% @lg -172px
+        transform: translate(-50%, -50%) @lg none
+        background: resolve("content/feedback/bg.svg") 
+        background-repeat: no-repeat 
+        background-position: right center 
+        background-size: contain @lg cover
+        z-index: -1
+
+    &__row
+        display: @lg flex
+        justify-content: @lg space-between
+        margin: @lg * -20px
+
+    &__info
+        width: @lg 53%
+        padding: @lg 0 20px
+        margin-bottom: 24px @sm 40px @lg 0
+
+    &__img
+        position: absolute 0 null null 0
+        z-index: -1
+
+        &--wrap
+            position: relative
+            margin-left: -268px
+            margin-bottom: -48px
+            margin-right: -24px
+            display: @lg-down none
+            
+    &__form
+        width: @lg 44%
+        padding: @lg 0 20px
+
+    &__title
+        color: #fff
+        max-width: 520px
+        margin-bottom: 16px @sm 20px
+
+    &__text
+        color: #fff
+
+    

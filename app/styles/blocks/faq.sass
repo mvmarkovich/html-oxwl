@@ -1,0 +1,50 @@
+.faq
+    border-top: 1px solid #d9d9d9
+    margin-top: 40px
+
+    &__item
+        padding: 32px 0
+        border-bottom: 1px solid #d9d9d9
+
+    &__btn
+        position: relative
+        width: 100%
+        text-align: left
+        text: 700 16px 1.33 @md 18px
+        padding-right: 32px
+
+        &:hover
+            color: @lg #182640
+
+        &:after
+            content: ''
+            size: 24px
+            background: resolve("icons/faq-plus.svg") no-repeat center / 20px
+            position: absolute 50% 0 null null
+            transform: translateY(-50%)
+            transition: .4s
+
+        &[aria-expanded="true"]
+            &:after
+                background-image: resolve("icons/faq-minus.svg")
+
+    &__content
+        transition: .4s
+        height: 0
+        overflow: hidden
+
+        & > *
+            margin: 20px 0
+
+            &:last-child
+                margin-bottom: 0
+
+        p
+            color: rgba(0, 0, 0, .7)
+
+        ul
+            padding: 0 0 0 16px
+
+            li
+                color: rgba(0, 0, 0, .7)
+                text: 14px @md 16px

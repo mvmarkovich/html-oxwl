@@ -1,0 +1,80 @@
+.btn
+	position: relative
+	font-family: var(--font-family)
+	color: #182640
+	text: 500 16px
+	letter-spacing: -0.03em
+	white-space: nowrap
+	line-height: unset
+	position: relative
+	text-decoration: none
+	background: transparent
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	padding: 0 32px
+	min-height: 60px
+	transition: .4s
+	border-radius: 12px
+	outline: 0
+	cursor: pointer
+	user-select: none
+	border: 1px solid var(--red)
+
+	&--reset
+		margin: 0
+		padding: 0
+		outline: 0
+		border: 0
+		min-height: 1px
+		border-radius: 0
+		background-color: transparent
+		cursor: pointer
+
+	&--light
+		background: var(--belyy)
+
+	&--text-light
+		color: #fff
+
+		&:hover
+			color: @xl #fff
+
+		&.btn--arrow-right
+			&:after
+				background-image: resolve("icons/arrow-right-light.svg")
+				margin-left: 12px
+
+	&--cross,
+	&--burger
+		&:before
+			content: ''
+			size: 40px
+			min-width: 40px
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+
+	&--arrow-right
+		&:after
+			content: ''
+			size: 24px
+			min-width: 24px
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+			margin-left: 16px
+
+	&--burger
+		&:before
+			background-image: resolve("icons/burger.svg")
+			background-size: 32px @md 24px
+
+	&--arrow-right
+		&:after
+			background-image: resolve("icons/arrow-right.svg")
+			transition: .4s
+
+		&:hover
+			&:after
+				transform: @lg rotate(45deg)

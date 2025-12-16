@@ -1,0 +1,36 @@
+.partners
+    margin-top: 40px
+    
+    &__slider
+        margin: 0 -20px @md 0 -10px
+        padding: 0 20px @md 0
+        margin-bottom: @md -20px
+        overflow: hidden
+
+        .swiper-wrapper
+            display: @md flex
+            flex-wrap: @md wrap
+
+    &__card
+        width: 230px @md 33.3% @lg 25%
+        height: auto
+        padding: @md 0 10px
+        margin-bottom: @md 20px
+
+        &-inner
+            border: 1px solid #d9d9d9
+            height: 100%
+            min-height: 124px
+            border-radius: 15px
+            display: flex
+            align-items: center
+            justify-content: center
+
+            &:hover
+                ^^&-img--wrap
+                    filter: @lg grayscale(0)
+
+        &-img
+            &--wrap
+                filter: grayscale(1)
+                transition: .4s

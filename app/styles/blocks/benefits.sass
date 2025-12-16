@@ -1,0 +1,68 @@
+.benefits
+    &__slider
+        margin: 0 -20px @lg 0 -10px
+        padding: 0 20px @lg 0
+        margin-bottom: @lg -20px
+        overflow: hidden
+
+        .swiper-wrapper
+            display: @lg flex
+            flex-wrap: @lg wrap
+
+    &__card
+        width: 295px @lg 50%
+        height: auto
+        padding: @lg 0 10px
+        margin-bottom: @lg 20px
+
+        &:nth-child(1)
+            ^&-text
+                text: @lg 14px
+
+        &-inner
+            position: relative
+            z-index: 1
+            overflow: hidden
+            background: #192741
+            padding: 24px @lg 40px
+            border-radius: 15px
+            height: 100%
+            min-height: 400px @lg 256px
+
+            background: @lg-down resolve("content/benefits/bg.webp") no-repeat center / cover
+
+            &:before
+                content: ''
+                position: absolute 0
+                background: rgba(25, 39, 65, 0.9)
+                z-index: -1
+
+        &-info
+            max-width: @lg 68%
+
+        &-title
+            color: #fff
+            text: 700 22px 1
+            letter-spacing: -0.03em
+            margin-bottom: 0
+
+        &-text
+            color: #fff @lg rgba(255, 255, 255, .7)
+            letter-spacing: -0.04em @lg -0.05em
+            margin: 20px 0 0 @lg 10px 0 0
+
+        &-img
+            &--wrap
+                position: @lg absolute
+                top: @lg 16px
+                right: @lg -64px
+                max-width: @lg 312px
+                z-index: @lg -1
+
+                margin-bottom: @lg-down 24px
+                max-width: @lg-down 24px
+                width: @lg-down 24px
+                
+
+        
+

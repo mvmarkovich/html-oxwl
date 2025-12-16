@@ -1,0 +1,49 @@
+.cookie
+    border: 1px solid rgba(241, 235, 229, 0.16)
+    border-radius: 12px
+    background: #2a2a2a
+    padding: 16px
+    position: fixed
+    display: none
+    bottom: 20%
+    left: 16px @lg 50%
+    right: 16px @lg auto
+    bottom: 16px
+    transform: @lg translateX(-50%)
+    z-index: 70
+
+    &.show
+        display: block
+
+    &--fadeOut
+        display: block
+        animation: hideCookie 1s forwards
+
+    &__row
+        display: @sm flex
+        align-items: @sm center
+
+    &__actions
+        display: flex
+        gap: 16px
+        margin: 16px 0 0 @sm 0 0 0 24px
+
+    &__text
+        text: 17px 1.3
+        white-space: @lg nowrap
+
+        a
+            color: var(--headers)
+            text-decoration: underline
+            text-decoration-thickness: 1px
+            text-underline-offset: 3px
+
+            &:hover
+                color: @lg var(--red)
+                text-decoration-color: @lg transparent
+
+    &__btn
+        min-height: 40px
+        padding: 0 16px
+
+    

@@ -1,0 +1,29 @@
+.hero
+    position: relative
+    z-index: 1
+    overflow: hidden
+    border-radius: 15px
+    padding: 40px 32px @lg 40px 48px @lg 40px 60px
+
+    background: resolve("content/hero/bg.webp") no-repeat center / cover
+
+    &:before
+        content: ''
+        position: absolute 0
+        background: rgba(25, 39, 65, 0.9)
+        z-index: -1
+
+    &__title
+        color: #fff
+        margin-bottom: 0
+
+    &__text
+        color: #fff
+        margin: 20px 0 0
+        max-width: 824px
+
+    &__actions
+        margin-top: 32px
+
+        .btn
+            width: @sm-down 100%

@@ -1,0 +1,46 @@
+header.header
+    .glass
+        .glass-filter
+        .glass-overlay
+        .glass-specular
+
+        .header__row.glass-content
+            a.header__logo(href="./")
+                img.header__logo-img(src="img/icons/logo.svg" width="127" height="28" alt="Оксвел")
+
+            .header__menu
+                nav.header__nav(aria-label="Main navigation")
+                    ul.header__nav-list
+                        each category, i in nav
+                            li.header__nav-item(class=[ category.childs ? 'header__nav-item--arrow' : '' ])
+                                a.header__nav-link(href="/" + i)= category.name
+
+                                if category.childs
+                                    ul.header__nav-child-list
+                                        each child, i in category.childs
+                                            li.header__nav-child-item(class=[ i == 1 ? 'header__nav-child-item--active' : '' ])
+                                                a.header__nav-child-link(href="#!c" + i)= child.name
+
+                .social.social--light.header__social
+                    a.social__link.social__link--wa(href="#wa" target="_blank" title="Перейти в Whats App")
+                    a.social__link.social__link--tg(href="https://t.me/oxwl2004" target="_blank" title="Перейти в Telegram")
+                    a.social__link.social__link--rb(href="https://rutube.ru/channel/58294412/" target="_blank" title="Перейти в Rutube")
+
+            .social.social--light.header__social
+                a.social__link.social__link--wa(href="#wa" target="_blank" title="Перейти в Whats App")
+                a.social__link.social__link--tg(href="#tg" target="_blank" title="Перейти в Telegram")
+                a.social__link.social__link--rb(href="#rb" target="_blank" title="Перейти в Rutube")
+
+            .header__panel
+                .commun.header__commun
+                    a.commun__link.commun__link--phone(href="tel:+74957890370" target="Позвонить по: +7 (495) 789 03 70") +7 (495) 789 03 70
+                    a.commun__link.commun__link--email(href="mailto:mail@oxwl.ru" target="Написать: mail@oxwl.ru") mail@oxwl.ru
+
+                button.btn.btn--light.btn--arrow-right.header__feedback-btn(aria-label="Open modal") Обратный звонок
+
+                button.btn.btn--reset.btn--burger.header__burger(aria-label="Toggle menu")
+
+
+
+
+

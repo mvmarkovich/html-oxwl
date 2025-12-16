@@ -1,0 +1,45 @@
+.social
+    display: flex
+    align-items: center
+    
+    &__link
+        display: inline-flex
+        align-items: center
+        margin-right: 24px
+        
+        &:before
+            content: ''
+            size: 24px
+            min-width: 24px
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+
+        &--wa
+            &:before
+                background-image: resolve("icons/social/wa.svg")
+
+        &--tg
+            &:before
+                background-image: resolve("icons/social/tg.svg")
+
+        &--rb
+            &:before
+                background-image: resolve("icons/social/rb.svg")
+
+        &:hover
+            opacity: @lg .7
+
+    &--light
+        ^&__link
+            &--wa
+                &:before
+                    background-image: resolve("icons/social/wa-light.svg")
+
+            &--tg
+                &:before
+                    background-image: resolve("icons/social/tg-light.svg")
+
+            &--rb
+                &:before
+                    background-image: resolve("icons/social/rb-light.svg")

@@ -1,0 +1,86 @@
+.species
+    &__slider
+        margin: 0 -20px @lg 0 -10px
+        padding: 0 20px @lg 0
+        margin-bottom: @lg -20px
+        overflow: hidden
+
+        .swiper-wrapper
+            display: @lg flex
+            flex-wrap: @lg wrap
+
+    &__card
+        width: @lg 33.3%
+        padding: @lg 0 10px
+        margin-bottom: @lg 20px
+
+        &:nth-child(-n + 2)
+            width: @lg 50%
+
+        &-inner
+            position: relative
+            border-radius: @lg 20px
+            overflow: hidden
+            padding: @lg 32px
+            border: @lg 1px solid transparent
+            height: 100%
+            min-height: 335px
+
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            transition: .4s
+
+            &:hover
+                ^^&-bg
+                    transform: @lg scale(1.05)
+
+                .glass-overlay
+                    background: @lg rgba(25, 39, 65, 0.7)
+
+        &-bg
+            size: 100%
+            object-fit: cover
+            object-position: center
+
+            position: @lg-down absolute 0 null null 0
+            transition: .4s
+
+            &--wrap
+                position: relative @lg absolute 0 null null 0
+                size: @lg 100%
+                z-index: @lg -1
+                transition: @lg .4s
+
+                min-height: @lg-down 300px
+                overflow: @lg-down hidden
+                margin-bottom: @lg-down 32px
+                border-radius: @lg-down 20px
+
+        &-info
+            border-radius: @lg 10px
+            padding: @lg 24px
+
+            .btn
+                color: @lg-down #192741
+                margin-top: 24px @lg 10px
+
+                &:after
+                    background-image: @lg-down resolve("icons/arrow-right.svg")
+
+        .glass-filter,
+        .glass-overlay, 
+        .glass-specular
+            display: @lg-down none
+
+        &-title
+            color: #192741 @lg #fff
+            text: 700 18px 1.2 @md 26px @lg 18px
+            letter-spacing: -0.04em @md -0.03em @lg -0.04em
+            margin-bottom: 0
+
+        &-text
+            display: @lg none
+            color: rgba(25, 39, 65, .7)
+            letter-spacing: -0.04em
+            margin: 16px 0 0 

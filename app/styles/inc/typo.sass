@@ -1,0 +1,62 @@
+html
+	font-size: 16px
+	
+body
+	font-family: var(--font-family)
+	color: #192741
+	text: 400 16px 1.3
+	background: #fff
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5
+	color: #192741
+	font-family: var(--font-family)
+	font-weight: 700
+	line-height: 1
+	margin-top: 0
+
+h1, .h1
+	text: 26px 1.3 @md 45px @lg 64px 1
+	letter-spacing: -0.04em @md -0.02em @lg -0.03em
+	margin: 0 0 24px
+
+h2, .h2
+	text: 26px @md 42px
+	letter-spacing: -0.05em @md -0.03em
+	margin: 0 0 40px
+
+h3, .h3
+	text: 20px @md 32px
+	margin: 0 0 24px
+
+h4, .h4
+	text: 24px
+	margin: 0 0 16px
+
+p, .text
+	text: 14px 1.3 @md 16px
+	margin: 16px 0
+
+ul:not([class])
+	text: 400 16px 1.8
+
+strong, b
+	font-weight: 700
+
+.text-uppercace
+	text-transform: uppercase
+
+.text-center
+	text-align: center
+
+.text-lg-center
+	text-align: @lg center
+
+.page-label
+	color: var(--text-gray)
+	text: 17px 1.3
+	letter-spacing: 0.1em
+	text-transform: uppercase
+	margin-bottom: 16px
+
+.page-title
+	color: var(--headers)

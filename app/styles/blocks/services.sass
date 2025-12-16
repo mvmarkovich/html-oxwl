@@ -1,0 +1,64 @@
+.services
+    &__slider
+        overflow: hidden
+        padding: 0 20px
+        margin: * -20px
+
+    &__card
+        width: 305px @md 400px
+        height: auto
+
+        &-inner
+            position: relative
+            border-radius: 15px
+            overflow: hidden
+            padding: 32px
+            border: @lg 1px solid transparent
+            height: 100%
+            min-height: 380px @md 500px
+
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            transition: .4s
+
+            &:hover
+                ^^&-title
+                    margin-bottom: 32px
+
+                ^^&-actions
+                    transition: .6s opacity
+                    opacity: 1
+
+        &-bg
+            size: 100%
+            object-fit: cover
+            object-position: center
+
+            &--wrap
+                position: absolute 0 null null 0
+                size: 100%
+                z-index: -1
+                transition: .4s
+
+                &:before
+                    content: ''
+                    position: absolute 0
+                    background: rgba(25, 39, 65, 0.7)
+                    z-index: 1
+
+        &-title
+            color: #fff
+            text: 700 20px 1 @md 32px
+            letter-spacing: -0.02em
+            transition: .4s
+            margin-bottom: -60px
+
+        &-actions
+            opacity: 0
+            transition: .2s opacity
+
+            .btn
+                width: @sm-down 100%
+
+        

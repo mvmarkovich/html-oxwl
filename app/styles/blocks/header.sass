@@ -1,0 +1,106 @@
+.header
+    position: sticky
+    top: 0
+    z-index: 2
+    padding: 20px
+    margin-bottom: -117px
+
+    &__row
+        border-radius: 15px
+        background: rgba(0, 0, 0, 0.07)
+        padding: 8px 12px 8px 20px @header-xl 16px 20px @xxl 16px 36px
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+    &__logo
+        display: block
+        width: 102px @xxl 127px
+        min-width: 102px @xxl 127px
+
+        &-img
+            width: 100%
+
+        &:hover
+            opacity: @lg .7
+
+    &__menu
+        display: @header-xl-down none
+
+        ^&__social
+            display: @lg none
+
+    &__nav
+        &-list
+            list-style: none
+            padding: 0
+            margin: 0
+
+            display: flex
+            align-items: center
+
+        &-item
+            margin-right: 20px @xxl 40px
+
+            &:last-child
+                margin: 0
+
+        &-link
+            color: #fff
+            text: 400 14px
+            display: inline-flex
+            align-items: center
+
+            &:hover
+                color: @lg rgba(255, 255, 255, .7)
+
+        &-child
+            &-list
+                display: none
+
+    &__social
+        display: none @lg flex
+        margin-left: auto @header-xl 0
+        margin-right: 24px @header-xl 0
+
+        .social__link
+            margin-right: 16px @xxl 24px
+
+            &:last-child
+                margin: 0
+
+            &:before
+                size: 20px @xxl 24px
+                min-width: 20px @xxl 24px
+
+    &__panel
+        display: flex
+        align-items: center
+
+    &__commun
+        display: none @md flex
+        align-items: center
+
+        .commun__link
+            margin: 0 20px 0 0 @xxl 0 24px 0 0
+
+            &:last-child
+                margin: 0
+
+    &__feedback-btn
+        display: @sm-down none
+        color: #192741
+        text: 400 14px
+        min-height: 40px @header-xl 45px
+        padding: 0 24px @header-xl 0 16px @xxl 0 30px
+        border-radius: 5px
+        margin-left: 24px @xxl 40px
+
+        &:after
+            size: 16px
+            min-width: 16px
+            margin-left: 8px
+
+    &__burger
+        display: @header-xl none
+        margin-left: 24px

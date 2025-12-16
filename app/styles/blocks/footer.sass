@@ -1,0 +1,140 @@
+#footer-map
+    min-height: 410px
+    
+.footer
+    padding: 40px 0 @lg 48px 0 32px
+    background: #192741
+
+    &__main
+        display: @lg flex
+        align-items: @lg flex-start
+        justify-content: @lg space-between
+
+    &__col
+        width: @lg 48% @xl 46%
+
+    &__logo
+        display: block
+        min-width: 148px @lg 232px
+        width: 148px @lg 232px
+        margin-bottom: 40px
+
+        img
+            width: 100%
+
+        &:hover
+            opacity: @lg .7
+
+    &__group
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin: * -20px
+
+        &-col
+            width: 100% @sm 50% @lg auto
+            padding: 0 20px
+            margin-bottom: 40px @sm 0
+
+            &:last-child
+                margin-bottom: 0
+
+    &__commun
+        display: flex
+        align-items: flex-start
+        flex-direction: column
+
+        .commun__link
+            margin-bottom: 16px
+
+            &:last-child
+                margin-bottom: 0
+
+    &__social
+        margin-top: 16px
+
+    &__nav
+        &-list
+            list-style: none
+            padding: 0
+            margin: 0
+
+        &-item
+            margin-bottom: 16px
+
+            &:last-child
+                margin: 0
+
+        &-link
+            color: rgba(255, 255, 255, .7)
+            text: 14px
+
+            &:hover
+                color: @lg rgba(255, 255, 255, 1)
+
+    &__feedback
+        width: @lg 48% @xl 42%
+        margin-top: 40px @lg 16px
+
+        &-title
+            color: #fff
+            text: 700 32px 1
+            letter-spacing: -0.04em
+            margin: 0
+
+        &-text
+            color: rgba(255, 255, 255, .7)
+            text: 14px
+            margin: 10px 0 0
+
+        &-form
+            margin-top: 32px
+
+        &-group
+            display: flex
+            flex-wrap: wrap
+            gap: 0 20px
+
+            .input
+                flex: 1 1 200px
+
+        .form__agree
+            .input__checkbox
+                &:checked
+                    & + .input__checkbox-label
+                        opacity: 1
+
+            .input__checkbox-label
+                opacity: .5
+                transition: .4s
+
+                &:hover
+                    opacity: @lg 1
+
+        .form__send
+            min-height: 54px
+
+    &__copy
+        margin-top: 40px @lg 32px
+
+        &-links
+            display: flex
+            flex-wrap: wrap
+            gap: 20px 32px
+
+            a 
+                color: rgba(255, 255, 255, .4)
+                text: 14px
+
+                &:hover
+                    color: @lg rgba(255, 255, 255, 1)
+
+        &-texts
+            margin-top: 16px
+            padding-top: 16px
+            border-top: 1px solid rgba(255, 255, 255, .4)
+
+            p
+                color: rgba(255, 255, 255, .4)
+                text: 14px
+                margin: 0
