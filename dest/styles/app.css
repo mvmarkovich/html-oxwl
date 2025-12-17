@@ -582,7 +582,7 @@ textarea.input__elem {
   min-width: 1rem;
   background: url('../img/icons/plus-light.svg') no-repeat center / contain;
   margin-left: 1.25rem;
-  transition: .4s;
+  transition: .4s background;
 }
 
 .select__btn.is-active:after {
@@ -1410,7 +1410,7 @@ a.commun__link:hover {
   background: url('../img/icons/plus.svg') no-repeat center / 10px;
   display: inline-block;
   margin-left: 0.75rem;
-  transition: .4s ease;
+  transition: .4s;
   opacity: .7;
 }
 
@@ -2134,6 +2134,7 @@ a.commun__link:hover {
 }
 
 .faq__btn {
+  color: #192741;
   position: relative;
   width: 100%;
   text-align: left;
