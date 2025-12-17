@@ -25,43 +25,196 @@
             opacity: @lg .7
 
     &__menu
+        padding: 0 24px @md 0 40px @header-xl 0
+        height: calc(100% - 96px - 20px) @header-xl auto
+        top: 96px @header-xl 0
+
+        position: @header-xl-down fixed
+
+        left: @header-xl-down 20px
+        right: @header-xl-down 20px
+
+        background: @header-xl-down #fff
+        border-radius: @header-xl-down 20px
         display: @header-xl-down none
+        justify-content: @header-xl-down space-between
+        flex-direction: @header-xl-down column
 
         ^&__social
-            display: @lg none
+            display: flex @header-xl none
 
     &__nav
+        flex: @header-xl-down 1
+        overflow: @header-xl-down auto
+        -webkit-overflow-scrolling: @header-xl-down touch
+        scrollbar-width: @header-xl-down none
+        padding-top: @md-down 24px @header-xl-down 32px
+        padding-bottom: @header-xl-down 24px
+
+        &::-webkit-scrollbar
+            size: 0
+            display: none
+
         &-list
             list-style: none
             padding: 0
             margin: 0
 
-            display: flex
-            align-items: center
+            display: @header-xl flex
+            align-items: @header-xl center
 
         &-item
-            margin-right: 20px @xxl 40px
+            margin-right: @header-xl 20px @xxl 40px
+            margin-bottom: 16px @header-xl 0
+
+            &--arrow
+                &.active
+                    ^^^&-submenu
+                        animation: fadeIn .4s forwards 0s
+                        display: block
+
+                ^^&-link
+                    &:after
+                        content: ''
+                        size: 10px
+                        min-width: 10px
+                        margin-left: 4px
+                        background-image: resolve("icons/plus.svg") @header-xl resolve("icons/plus-light.svg") 
+                        background-repeat: no-repeat 
+                        background-position: center 
+                        background-size: contain
 
             &:last-child
                 margin: 0
 
         &-link
-            color: #fff
+            color: #6e6e6e @header-xl rgba(255, 255, 255, .8)
             text: 400 14px
             display: inline-flex
             align-items: center
 
             &:hover
-                color: @lg rgba(255, 255, 255, .7)
+                color: @lg rgba(255, 255, 255, 1)
+
+        &-submenu
+            position: @header-xl absolute
+            top: @header-xl 100%
+            left: @header-xl 0
+            right: @header-xl 0
+            margin-top: 16px @header-xl 20px
+            border-radius: @header-xl 15px
+            background: @header-xl #fff
+            padding: 0 0 0 16px @header-xl 48px @xxl 132px 60px
+
+            display: @header-xl none
+
+            &-list
+                list-style: none
+                padding: 0
+                margin: 0
+
+                position: relative
+                width: 100%
+                max-width: 1320px
+                margin: 0 auto
+
+                &:before
+                    content: ''
+                    size: 1px 100%
+                    background: rgba(25, 39, 65, .1)
+                    position: absolute
+                    top: 0
+                    left: 384px @xxl 410px
+                    display: @header-xl-down none
+
+            &-item
+                margin-bottom: 12px @header-xl 24px
+                max-width: @header-xl 384px @xxl 410px
+
+                &:last-child
+                    margin-bottom: 0
+
+                &.active
+                    ^^&-link
+                        color: #192741
+                        text-shadow: 0 0 .4px #192741, 0 0 .4px #192741
+
+                        &:after
+                            background-image: resolve("icons/minus.svg")
+                            opacity: 1
+
+                    ^^&-toggle
+                        background-image: resolve("icons/minus.svg")
+                        opacity: 1
+
+                    ^^^&-child-list
+                        animation: fadeIn .4s forwards 0s
+                        display: flex
+
+            &-name
+                display: inline-flex
+
+            &-toggle
+                size: 24px
+                min-width: 24px
+                margin-left: 12px
+                background: resolve("icons/plus.svg") no-repeat center / 10px
+                display: @header-xl none
+
+            &-link
+                color: rgba(25, 39, 65, .7)
+                text: 16px 1.5 @header-xl 20px
+                text-decoration: none
+                display: inline-block
+
+                &:after
+                    content: ''
+                    size: 16px
+                    min-width: 16px
+                    background: resolve("icons/plus.svg") no-repeat center / 10px
+                    display: inline-block
+                    margin-left: 12px
+                    transition: .4s ease
+                    display: @header-xl-down none
+                    opacity: .7
 
         &-child
             &-list
+                list-style: none
+                padding: 10px @header-xl 0
+                padding-left: @header-xl 60px @xxl 80px
+                margin: 4px 0 -20px @header-xl 0 -20px -20px
+
+                position: @header-xl absolute
+                top: @header-xl 0
+                left: @header-xl 384px @xxl 410px
+                right: @header-xl 0
+
                 display: none
+                flex-wrap: wrap
+                
+            &-item
+                width: 100% @md 50%
+                padding: 0 6px @header-xl 0 20px
+                margin-bottom: 10px @header-xl 20px
+
+            &-link
+                position: relative
+                color: #6e6e6e @header-xl #9c9c9c
+                text: 14px
+                text-decoration: none
+
+                &:hover
+                    color: @lg #192741
+                    text-shadow: @lg 0 0 .4px #192741, 0 0 .4px #192741
 
     &__social
-        display: none @lg flex
-        margin-left: auto @header-xl 0
-        margin-right: 24px @header-xl 0
+        display: none @header-xl flex
+        margin-left: @header-xl 0
+        margin-right: @header-xl 0
+        border-top: 1px solid rgba(0, 0, 0, .1) @header-xl none
+        padding-top: 24px @header-xl 0
+        padding-bottom: 24px @md 32px @header-xl 0
 
         .social__link
             margin-right: 16px @xxl 24px
@@ -104,3 +257,15 @@
     &__burger
         display: @header-xl none
         margin-left: 24px
+
+        &:before
+            transition: .4s
+
+.header-mobile-menu
+    .header__menu
+        display: flex
+        animation: fadeIn .4s forwards 0s
+
+    .header__burger
+        &:before
+            background-image: resolve("icons/cross-light.svg")

@@ -102,7 +102,8 @@
 		&:checked
 			& + ^&-label
 				&:before
-					background: #fff
+					background-color: #fff
+					background-image: resolve("icons/checkbox-active.svg")
 					border-color: #fff
 
 		&-label
@@ -118,6 +119,9 @@
 				position: absolute
 				top: -1px
 				left: 0
+				background-repeat: no-repeat
+				background-position: center
+				background-size: contain
 				border: 1px solid #d9d9d9
 				border-radius: 2px
 				transition: .4s
@@ -136,39 +140,50 @@
 			content: ''
 			size: 16px
 			min-width: 16px
-			background: resolve("icons/select-plus.svg") no-repeat center / contain
+			background: resolve("icons/plus-light.svg") no-repeat center / contain
 			margin-left: 20px
 			transition: .4s
 
 		&.is-active
 			&:after
-				transform: rotate(45deg)
+				background-image: resolve("icons/minus-light.svg")
 
 	&__dropdown
 		position: absolute 100% null null 0
 		z-index: 11
-		margin-top: 12px
+		margin-top: -16px
 		width: 100%
 		background: #253655
-		padding: 8px 0
-		border-radius: 10px
+		padding: 12px
+		border-radius: 0 0 10px 10px
 		display: block
-		animation: .4s fadeInTop 0s forwards
+		animation: .4s fadeInBottom 0s forwards
 
 		&-option
 			cursor: pointer
-			color: #fff
+			color: rgba(255, 255, 255, .7)
 			text: 400 12px 1.3
 			background: #253655
-			padding: 0 20px
+			padding: 0 12px
 			display: inline-flex
 			align-items: center
-			min-height: 54px
+			min-height: 40px
 			width: 100%
 			transition: .4s
+			border-radius: 10px
+			margin-bottom: 4px
+
+			&:last-child
+				margin-bottom: 0
 
 			&:hover
+				color: @lg #fff
 				background: @lg #192741
+
+			&.option-active
+				cursor: default
+				color: #fff
+				background: #192741
 
 		&--hide
 			display: none

@@ -19,14 +19,14 @@
         &:after
             content: ''
             size: 24px
-            background: resolve("icons/faq-plus.svg") no-repeat center / 20px
+            background: resolve("icons/plus.svg") no-repeat center / 20px
             position: absolute 50% 0 null null
             transform: translateY(-50%)
             transition: .4s
 
         &[aria-expanded="true"]
             &:after
-                background-image: resolve("icons/faq-minus.svg")
+                background-image: resolve("icons/minus.svg")
 
     &__content
         transition: .4s

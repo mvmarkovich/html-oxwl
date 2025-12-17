@@ -16,11 +16,37 @@
             border-radius: 15px
             padding: 32px
             display: flex
+            align-items: flex-start
             flex-direction: column
             min-height: 200px @md 260px
 
+            &:hover
+                ^^&-title
+                    &::before
+                        top: -101%
+
+                    &:after
+                        top: 0
+
         &-title
-            text: 500 40px @md 54px
+            position: relative
+            color: transparent
+            text: 500 40px .9 @md 54px
+            overflow: hidden
+            display: inline-block
+
+            &:before, &:after
+                color: #192741
+                content: attr(data-title)
+                position: absolute
+                left: 0
+                transition: .4s
+
+            &:before
+                top: 0
+
+            &:after
+                top: 101%
 
         &-text
             color: #818793

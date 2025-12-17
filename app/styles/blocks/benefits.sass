@@ -31,6 +31,11 @@
 
             background: @lg-down resolve("content/benefits/bg.webp") no-repeat center / cover
 
+            &:hover
+                ^^&-img--wrap
+                    img, source
+                        transform: @lg scale(1.2)
+
             &:before
                 content: ''
                 position: absolute 0
@@ -55,13 +60,17 @@
             &--wrap
                 position: @lg absolute
                 top: @lg 16px
-                right: @lg -64px
+                right: @lg -84px
                 max-width: @lg 312px
                 z-index: @lg -1
 
                 margin-bottom: @lg-down 24px
                 max-width: @lg-down 24px
                 width: @lg-down 24px
+
+                img, source
+                    transition: .6s
+
                 
 
         

@@ -6,20 +6,84 @@ let desktop = window.matchMedia('(min-width: 1025px)');
 // Mobile menu
 //
 
-// const header = document.querySelector('.header'),
-// 	headerBurger = document.querySelector('.header__burger'),
-// 	headerOverlay = document.querySelector('.header__overlay'),
-// 	headerClose = document.querySelector('.header__menu-close');
+const header = document.querySelector('.header'),
+      headerBurger = document.querySelector('.header__burger');
 
-// function toggleMobileMenu(e) {
-// 	header.classList.toggle('header-mobile-menu');
-// 	document.body.classList.toggle('overflow-hidden');
-// 	headerOverlay.classList.toggle('header__overlay--show');
-// }
+function toggleMobileMenu() {
+    header.classList.toggle('header-mobile-menu');
+    document.body.classList.toggle('overflow-hidden');
+}
 
-// headerBurger.addEventListener('click', toggleMobileMenu);
-// headerClose.addEventListener('click', toggleMobileMenu);
-// headerOverlay.addEventListener('click', toggleMobileMenu);
+function initMobileMenu() {
+    if (!headerBurger) return;
+    headerBurger.addEventListener('click', toggleMobileMenu);
+}
+
+function setActiveSubmenuItem(current, items) {
+    items.forEach(el => el.classList.remove('active'));
+    current.classList.add('active');
+}
+
+function initSubmenu() {
+    const navItems = document.querySelectorAll('.header__nav-item');
+    navItems.forEach(navItem => {
+        const submenu = navItem.querySelector('.header__nav-submenu');
+        if (!submenu) return;
+
+        const submenuItems = submenu.querySelectorAll('.header__nav-submenu-item');
+        if (!submenuItems.length) return;
+
+        setActiveSubmenuItem(submenuItems[0], submenuItems);
+
+        submenuItems.forEach(item => {
+            const toggle = item.querySelector('.header__nav-submenu-toggle');
+
+            // Hover для desktop
+            item.addEventListener('mouseenter', () => {
+                if (window.innerWidth <= 1380) return;
+                setActiveSubmenuItem(item, submenuItems);
+            });
+
+            // Click на toggle для mobile
+            if (toggle) {
+                toggle.addEventListener('click', e => {
+                    e.preventDefault();
+                    setActiveSubmenuItem(item, submenuItems);
+                });
+            }
+        });
+    });
+}
+
+function initArrowItems() {
+    const arrowItems = document.querySelectorAll('.header__nav-item--arrow');
+    
+    arrowItems.forEach(item => {
+        let link = item.querySelector('.header__nav-link');
+
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            item.classList.toggle('active');
+        });
+    });
+
+    document.addEventListener('click', e => {
+        const isArrow = e.target.closest('.header__nav-item--arrow');
+        const isSubmenu = e.target.closest('.header__nav-submenu');
+
+        if (!isArrow && !isSubmenu) {
+            arrowItems.forEach(item => item.classList.remove('active'));
+        }
+    });
+}
+
+function initHeader() {
+    initMobileMenu();
+    initSubmenu();
+    initArrowItems();
+}
+
+initHeader();
 
 //
 // Modals
@@ -268,12 +332,12 @@ ymaps.ready(function () {
         controls: []
     }, {}),
 
-    officePlacemark = new ymaps.Placemark(footerMap.getCenter(), {
-        // hintContent: '',
-        // balloonContent: ''
-    }, {
-        iconColor: '#192741'
-    });
+        officePlacemark = new ymaps.Placemark(footerMap.getCenter(), {
+            // hintContent: '',
+            // balloonContent: ''
+        }, {
+            iconColor: '#192741'
+        });
 
     footerMap.geoObjects.add(officePlacemark);
 });
