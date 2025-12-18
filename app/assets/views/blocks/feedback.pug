@@ -1,0 +1,52 @@
+.feedback
+    .feedback__row
+        .feedback__info
+            h2.feedback__title Онлайн расчет стоимости вашего объекта
+            .feedback__text.text Учтем ваши пожелания. Сделаем индивидуальный проект. <br /> Предоставим смету.
+
+            .feedback__img--wrap
+                img.feedback__img(src="img/content/feedback/option_0.webp" width="1296" height="729" alt="Title feedback")
+
+        form.feedback__form(action="/.php" method="POST")
+            .input
+                .input__label Выберите объект
+
+                .select
+                    input.select__input(type="hidden" name="object")
+                    .select__btn
+
+                    .select__dropdown.select__dropdown--hide
+                        .select__dropdown-option(data-value="0") Промышленное здание
+                        .select__dropdown-option(data-value="1") Elem 2
+                        .select__dropdown-option(data-value="2") Elem 3
+
+            .input
+                .input__label Выберите площадь
+
+                .select
+                    input.select__input(type="hidden" name="area")
+                    .select__btn
+
+                    .select__dropdown.select__dropdown--hide
+                        .select__dropdown-option(data-value="0") 2000 - 5000 м2
+                        .select__dropdown-option(data-value="1") Elem 2
+                        .select__dropdown-option(data-value="2") Elem 3
+
+            label.input
+                .input__label Введите вашу почту *
+                input.input__elem(type="text" name="email" placeholder="E-mail")
+
+            label.input
+                .input__label Введите ваш телефон *
+                input.input__elem(type="text" name="phone" placeholder="+7 (000) 000-00-00")
+
+            .input
+                .input__label Когда вам позвонить ?
+                input.input__elem.input__elem--date(type="text" name="time" placeholder="Выберите время и дату")
+
+            label.input.form__agree 
+                input.input__checkbox(type="checkbox" name="agree") 
+                .input__checkbox-label Нажимая на кнопку, Вы соглашаетесь на <a href="https://baumix.ru/soglasie/" target="_blank">обработку персональных данных</a>
+
+            .form__footer
+                button.btn.btn--light.btn--arrow-right.form__send(type="submit" aria-label="Send form") Заказать расчет

@@ -1,0 +1,34 @@
+.buildings
+    &__slider
+        position: @xl relative
+        width: @xl 100vw
+        left: @xl 50%
+        overflow: hidden
+        transform: @xl translateX(-50%)
+        padding: 0 20px @xl 0 calc((100vw - 1240px) / 2)
+        margin: * -20px @xl 0
+
+    &__card
+        width: 320px @sm 400px
+        margin-right: 20px
+
+        &:last-child
+            margin-right: 0
+
+        &-img
+            position: absolute 0 null null 0
+            size: 100%
+            object-fit: cover
+
+            &--wrap
+                position: relative
+                min-height: 300px
+                overflow: hidden
+                border-radius: 15px
+
+        &-info
+            margin-top: 32px
+
+        &-title
+            text: 700 18px 1 @md 20px
+            letter-spacing: -0.03em

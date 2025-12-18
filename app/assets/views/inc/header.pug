@@ -13,7 +13,7 @@ header.header
                     ul.header__nav-list
                         each category, i in nav
                             li.header__nav-item(class=[ category.submenu ? 'header__nav-item--arrow' : '' ])
-                                a.header__nav-link(href="#!" + i)= category.name
+                                a.header__nav-link(href="/" + i)= category.name
 
                                 if category.submenu
                                     .header__nav-submenu
@@ -21,13 +21,13 @@ header.header
                                             each submenu, i in category.submenu
                                                 li.header__nav-submenu-item
                                                     .header__nav-submenu-name
-                                                        a.header__nav-submenu-link(href="#!" + i)= submenu.name
+                                                        a.header__nav-submenu-link(href="/" + i)= submenu.name
                                                         button.btn.btn--reset.header__nav-submenu-toggle(aria-label="Toggle child list ")
 
                                                     ul.header__nav-child-list
                                                         each child, i in submenu.childs
                                                             li.header__nav-child-item
-                                                                a.header__nav-child-link(href="#!")= child.name
+                                                                a.header__nav-child-link(href="/")= child.name
 
                 .social.header__social
                     a.social__link.social__link--wa(href="#wa" target="_blank" title="Перейти в Whats App")

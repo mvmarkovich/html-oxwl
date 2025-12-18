@@ -1,0 +1,75 @@
+.slider-nav
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 24px
+
+    & > *
+        margin-right: 4px
+
+        &:last-child
+            margin: 0
+    
+.slider-arrow
+    size: 44px
+    min-width: 44px
+    border-radius: 11px
+    background-color: #192741
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 24px
+    transition: .4s
+
+    &[disabled]
+        opacity: 0
+        transition: 0s
+        visibility: hidden
+
+.slider-prev
+    background-image: resolve("icons/slider-prev.svg")
+
+.slider-next
+    background-image: resolve("icons/slider-next.svg")
+
+.slider-pag
+    &.swiper-pagination-horizontal
+        display: flex
+        align-items: center
+        padding: 0 20px
+        width: auto
+        min-height: 44px
+        background-color: #192741
+        border-radius: 11px
+
+        .swiper-pagination-bullet
+            position: relative
+            size: 8px
+            min-width: 8px
+            background: #fff
+            margin: 0 8px 0 0
+            opacity: 1
+            transition: .4s
+            border-radius: 4px
+            overflow: hidden
+
+            &:before
+                content: ''
+                size: 0px 100%
+                position: absolute 0 null null 0
+                background: transparent
+                border-radius: 4px
+                transition: .4s
+
+            &:hover
+                background: @lg #e2e2e2
+
+            &:last-child
+                margin: 0
+
+        .swiper-pagination-bullet-active
+            pointer-events: none
+            width: 36px
+
+            &:before
+                width: 30px
+                background: #e2e2e2

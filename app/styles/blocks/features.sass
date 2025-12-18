@@ -1,0 +1,44 @@
+.features
+    &__slider
+        margin: 0 -20px @md 0 -10px
+        padding: 0 20px @md 0
+        margin-bottom: @md -20px
+        overflow: hidden
+
+        .swiper-wrapper
+            display: @md flex
+            flex-wrap: @md wrap
+
+    &__card
+        width: 320px @md 50% @lg 33.3%
+        height: auto
+        padding: @md 0 10px
+        margin-bottom: @md 20px
+        margin-right: @md-down 20px
+
+        &:last-child
+            margin-right: @md-down 0
+
+        &-inner
+            height: 100%
+            padding: 32px
+            background: #f6f8fa
+            border-radius: 15px
+            min-height: 248px @md 280px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+
+        &-icon
+            &--wrap
+                width: 36px
+                max-width: 36px
+                margin-bottom: 12px
+
+        &-title
+            text: 500 18px 1.15 @md 22px
+
+        &-text
+            color: #818793
+            margin: 20px 0 0
+            min-height: @md 100px @lg 80px

@@ -1,9 +1,17 @@
 .header
     position: sticky
-    top: 0
+    top: -96px @header-xl -117px
     z-index: 2
     padding: 20px
-    margin-bottom: -117px
+    margin-bottom: -96px @header-xl -117px
+    transition: .4s
+
+    &--visible
+        top: 0 @header-xl 0
+
+    &--bg
+        .glass-overlay
+            background: rgba(37, 54, 85, 0.8)
 
     &__row
         border-radius: 15px
@@ -73,6 +81,10 @@
                         animation: fadeIn .4s forwards 0s
                         display: block
 
+                    ^^^&-link
+                        &:after
+                            background-image: resolve("icons/minus.svg") @header-xl resolve("icons/minus-light.svg") 
+
                 ^^&-link
                     &:after
                         content: ''
@@ -106,7 +118,7 @@
             background: @header-xl #fff
             padding: 0 0 0 16px @header-xl 48px @xxl 132px 60px
 
-            display: @header-xl none
+            display: none
 
             &-list
                 list-style: none

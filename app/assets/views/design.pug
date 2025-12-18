@@ -1,0 +1,200 @@
+extends layouts/layout.pug
+
+block title
+    title Проектирование | OXWL
+
+block content
+    section.section.section--full-width
+        .banner
+            .container
+                .banner__media
+                    img.banner__media-img(src="img/content/banner/card_3.webp" width="1920" height="900" alt="Title banner")
+
+                .banner__body
+                    h1.banner__title Проектируем промышленные и коммерческие здания
+                    .banner__text.text Комплексный проектный подход: архитектура, конструктив, инженерия, согласования. Надёжно, точно, под ваши задачи.
+
+                    .banner__actions
+                        button.btn.btn--light.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Рассчитать стоимость
+                        button.btn.btn--border-light.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Получить референс лист
+
+    section.section
+        .section__head
+            .section__label Что проектируем
+
+            h2.section__title 
+                | Проектируем следующие 
+                <br />
+                span виды зданий и сооружений
+
+        .buildings
+            .buildings__slider
+                .swiper-wrapper
+                    .buildings__card.swiper-slide
+                        .buildings__card-inner
+                            .buildings__card-img--wrap
+                                img.buildings__card-img(src="img/content/buildings/card_0.webp" width="400" height="300" alt="Title card")
+
+                            .buildings__card-info
+                                .buildings__card-title Проектирование производственных зданий
+
+                    .buildings__card.swiper-slide
+                        .buildings__card-inner
+                            .buildings__card-img--wrap
+                                img.buildings__card-img(src="img/content/buildings/card_1.webp" width="400" height="300" alt="Title card")
+
+                            .buildings__card-info
+                                .buildings__card-title Проектирование и реконструкция торговых центров
+
+                    .buildings__card.swiper-slide
+                        .buildings__card-inner
+                            .buildings__card-img--wrap
+                                img.buildings__card-img(src="img/content/buildings/card_2.webp" width="400" height="300" alt="Title card")
+
+                            .buildings__card-info
+                                .buildings__card-title Проектирование заводов и предприятий
+
+                    .buildings__card.swiper-slide
+                        .buildings__card-inner
+                            .buildings__card-img--wrap
+                                img.buildings__card-img(src="img/content/buildings/card_3.webp" width="400" height="300" alt="Title card")
+
+                            .buildings__card-info
+                                .buildings__card-title Проектирование и реконструкция кинотеатров
+
+                    .buildings__card.swiper-slide
+                        .buildings__card-inner
+                            .buildings__card-img--wrap
+                                img.buildings__card-img(src="img/content/buildings/card_4.webp" width="400" height="300" alt="Title card")
+
+                            .buildings__card-info
+                                .buildings__card-title Проектирование и реконструкция кинотеатров
+
+    section.section
+        .section__head
+            .section__label Почему мы
+
+            h2.section__title 
+                | Уникальные 
+                span преимущества
+
+        .features
+            .features__slider
+                .swiper-wrapper
+                    .features__card.swiper-slide
+                        .features__card-inner
+                            .features__card-icon--wrap
+                                img.features__card-icon(src="img/content/features/card_0.svg" width="36" height="36" alt="Title card")
+
+                            .features__card-info
+                                .features__card-title Сильная интеграция
+                                .features__card-text.text Сильная интеграция: проектирование, производство металлоконструкций и монтаж — один подрядчик, минимизация рисков.
+
+                    .features__card.swiper-slide
+                        .features__card-inner
+                            .features__card-icon--wrap
+                                img.features__card-icon(src="img/content/features/card_1.svg" width="36" height="36" alt="Title card")
+
+                            .features__card-info
+                                .features__card-title Документация
+                                .features__card-text.text Полный набор проектной документации: архитектура, конструкции, инженерные сети, согласования.
+
+                    .features__card.swiper-slide
+                        .features__card-inner
+                            .features__card-icon--wrap
+                                img.features__card-icon(src="img/content/features/card_2.svg" width="36" height="36" alt="Title card")
+
+                            .features__card-info
+                                .features__card-title Сроки
+                                .features__card-text.text Сокращение сроков благодаря готовой платформе металлоконструкций и собственному производству.
+
+                    .features__card.swiper-slide
+                        .features__card-inner
+                            .features__card-icon--wrap
+                                img.features__card-icon(src="img/content/features/card_3.svg" width="36" height="36" alt="Title card")
+
+                            .features__card-info
+                                .features__card-title Цена
+                                .features__card-text.text Прозрачная фиксированная цена на этапе проектирования – без сюрпризов.
+
+                    .features__card.swiper-slide
+                        .features__card-inner
+                            .features__card-icon--wrap
+                                img.features__card-icon(src="img/content/features/card_4.svg" width="36" height="36" alt="Title card")
+
+                            .features__card-info
+                                .features__card-title Гарантия
+                                .features__card-text.text Гарантия соответствия нормативам и стандартам (ГОСТ, СНиП) и сопровождение на всех этапах.
+
+                    .features__card.swiper-slide
+                        .features__card-inner
+                            .features__card-icon--wrap
+                                img.features__card-icon(src="img/content/features/card_5.svg" width="36" height="36" alt="Title card")
+
+                            .features__card-info
+                                .features__card-title Подход
+                                .features__card-text.text Индивидуальный подход: мы подбираем оптимальные шаги колонн, конструкции под нагрузку, учитываем применение будущего здания.
+
+    section.section
+        include blocks/feedback
+
+    section.section
+        .section__head
+            .section__label Выполненные проекты
+
+            h2.section__title 
+                | Мы построили 
+                span более 200 объектов
+
+        include blocks/cases
+
+    section.section
+        .hero
+            .hero__group
+                .hero__info
+                    h2.hero__title Консультация специалиста
+                    .hero__text.text Важно правильно выбрать исполнителя, который реализует проект в соответствии с нормами, стандартами, требованиями и пожеланиями заказчика.
+
+                    .hero__actions
+                        button.btn.btn--light.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Рассчитать стоимость
+
+    section.section
+        .section__head
+            h2.section__title 
+                | Услуги компании 
+                span Оксвел
+
+        include blocks/services
+
+    section.section
+        include blocks/company-offer
+
+    section.section
+        .section__head.section__head--row
+            h2.section__title 
+                | Наш опыт - 
+                span надежность, подтверждена цифрами
+
+            .section__text.text Работа на базе Подольского завода металлоконструкций позволяет нам гарантировать высокое качество продукции и соблюдение сроков.
+
+        include blocks/stats
+
+    section.section
+        .section__head.section__head--row
+            h2.section__title 
+                | Наши здания используют 
+                span крупнейшие компании России
+
+            .section__text.text Каждый проект для нас — это уникальная задача. Мы учитываем все пожелания заказчика, предлагая оптимальные технические и экономические решения.
+
+        include blocks/partners
+
+    section.section
+        .hero
+            .hero__group
+                .hero__info
+                    h2.hero__title Получить ТКП
+                    .hero__text.text Подготовим быстрый расчет стоимости проектирования вашего объекта <br /> в течение 1 рабочего дня
+
+                    .hero__actions
+                        button.btn.btn--light.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Оставить заявку

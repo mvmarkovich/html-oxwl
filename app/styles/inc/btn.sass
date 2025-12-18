@@ -19,7 +19,7 @@
 	outline: 0
 	cursor: pointer
 	user-select: none
-	border: 1px solid var(--red)
+	border: 1px solid #182640
 
 	&--reset
 		margin: 0
@@ -33,6 +33,19 @@
 
 	&--light
 		background: var(--belyy)
+
+	&--gray
+		color: #192741
+		background: #f6f8fa
+
+	&--border-light
+		color: #fff
+		border-color: #fff
+
+		&.btn--arrow-right
+			&:after
+				background-image: resolve("icons/arrow-right-light.svg")
+				margin-left: 12px
 
 	&--text-light
 		color: #fff
