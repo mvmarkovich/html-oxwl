@@ -338,12 +338,14 @@ b,strong {
 }
 
 .btn--light {
-  background: var(--belyy);
+  background: #fff;
+  border-color: #fff;
 }
 
 .btn--gray {
   color: #192741;
   background: #f6f8fa;
+  border-color: #f6f8fa;
 }
 
 .btn--border-light {
