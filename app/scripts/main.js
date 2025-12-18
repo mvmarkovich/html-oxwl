@@ -85,7 +85,7 @@ function initArrowItems() {
         link.addEventListener('click', e => {
             e.preventDefault();
             item.classList.toggle('active');
-            if (window.innerWidth >= 1379) document.body.classList.add('overflow-hidden');
+            if (window.innerWidth >= 1379) document.body.classList.toggle('overflow-hidden');
         });
     });
 
@@ -95,7 +95,7 @@ function initArrowItems() {
 
         if (!isArrow && !isSubmenu) {
             arrowItems.forEach(item => item.classList.remove('active'));
-            if (window.innerWidth >= 1379)  document.body.classList.remove('overflow-hidden');
+            if (window.innerWidth >= 1379) document.body.classList.remove('overflow-hidden');
         }
     });
 }
