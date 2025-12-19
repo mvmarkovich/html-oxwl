@@ -28,6 +28,7 @@ html(dir="ltr")
 		block title
 
 		link(href="libs/swiper/swiper-bundle.min.css" rel="stylesheet")
+		link(href="libs/fancybox/fancybox.min.css" rel="stylesheet")
 		link(href="styles/app.css" rel="stylesheet")
 
 	body
@@ -37,6 +38,8 @@ html(dir="ltr")
 			block content
 
 		include ../inc/footer
+
+		include ../inc/modals
 
 		svg(style='display: none')
 			filter#glass-distortion(x='-50%' y='-50%' width='200%' height='200%')
@@ -68,4 +71,6 @@ html(dir="ltr")
 
 		script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
 		script(src="libs/swiper/swiper-bundle.min.js")
+		script(src="libs/fancybox/fancybox.min.js")
+		script(src="libs/imask.js")
 		script(src="scripts/main.js")

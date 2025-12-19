@@ -7,6 +7,7 @@
     <meta name="theme-color" content="#242323">
     <title>Проектирование | OXWL</title>
     <link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="libs/fancybox/fancybox.min.css" rel="stylesheet">
     <link href="styles/app.css" rel="stylesheet">
   </head>
   <body>
@@ -113,8 +114,7 @@
           </div>
           <div class="social social--light header__social"><a class="social__link social__link--wa" href="#wa" target="_blank" title="Перейти в Whats App"></a><a class="social__link social__link--tg" href="#tg" target="_blank" title="Перейти в Telegram"></a><a class="social__link social__link--rb" href="#rb" target="_blank" title="Перейти в Rutube"></a></div>
           <div class="header__panel">
-            <div class="commun header__commun"><a class="commun__link commun__link--phone" href="tel:+74957890370" target="Позвонить по: +7 (495) 789 03 70">+7 (495) 789 03 70</a><a class="commun__link commun__link--email" href="mailto:mail@oxwl.ru" target="Написать: mail@oxwl.ru">mail@oxwl.ru</a></div>
-            <button class="btn btn--light btn--arrow-right header__feedback-btn" aria-label="Open modal">Обратный звонок</button>
+            <div class="commun header__commun"><a class="commun__link commun__link--phone" href="tel:+74957890370" target="Позвонить по: +7 (495) 789 03 70">+7 (495) 789 03 70</a><a class="commun__link commun__link--email" href="mailto:mail@oxwl.ru" target="Написать: mail@oxwl.ru">mail@oxwl.ru</a></div><a class="btn btn--light btn--arrow-right header__feedback-btn" href="#modal-feedback" data-fancybox>Обратный звонок</a>
             <button class="btn btn--reset btn--burger header__burger" aria-label="Toggle menu"></button>
           </div>
         </div>
@@ -1413,6 +1413,7 @@
         </div>
       </div>
     </footer>
+    <div class="modal" id="modal-feedback"></div>
     <svg style="display: none">
       <filter id="glass-distortion" x="-50%" y="-50%" width="200%" height="200%">
         <feimage x="0" y="0" result="normalMap" xlink:href="data:image/svg+xml;utf8,				&lt;svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'&gt;				&lt;radialGradient id='nmap' cx='50%' cy='50%' r='50%'&gt;				&lt;stop offset='0%' stop-color='rgb(128,128,255)'/&gt;				&lt;stop offset='100%' stop-color='rgb(255,255,255)'/&gt;				&lt;/radialGradient&gt;				&lt;rect width='100%' height='100%' fill='url(#nmap)'/&gt;				&lt;/svg&gt;"></feimage>
@@ -1424,6 +1425,8 @@
     </svg>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/fancybox/fancybox.min.js"></script>
+    <script src="libs/imask.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

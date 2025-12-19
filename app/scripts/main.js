@@ -141,66 +141,6 @@ function initHeader() {
 
 initHeader();
 
-//
-// Modals
-//
-
-// let modals = document.querySelectorAll('.modal');
-// let modalButtons = document.querySelectorAll('[data-modal]');
-// let closeButtons = document.querySelectorAll('[data-close-modal]');
-
-// function openModal(modalId, modalTitle, modalText) {
-// 	let modal = document.getElementById(modalId);
-
-// 	if ((modalId, modalTitle)) {
-// 		modal.querySelector('.modal__title').textContent = modalTitle;
-// 		modal.querySelector('.modal__text').textContent = modalText;
-// 	}
-
-// 	modal.style.display = 'flex';
-// 	modal.classList.add('modal--open');
-// 	document.body.style.overflow = 'hidden';
-
-// 	setTimeout(function () {
-// 		modal.querySelector('.modal__square').style.transform = 'translateY(0)';
-// 		modal.querySelector('.modal__square').style.opacity = '1';
-// 	}, 10);
-// }
-
-// function closeModal(modalId) {
-// 	let modal = document.getElementById(modalId);
-// 	modal.querySelector('.modal__square').style.transform = 'translateY(20px)';
-// 	modal.querySelector('.modal__square').style.opacity = '0';
-// 	modal.classList.remove('modal--open');
-// 	document.body.style.overflow = '';
-
-// 	setTimeout(function () {
-// 		modal.style.display = 'none';
-// 	}, 300);
-// }
-
-// modalButtons.forEach(function (button) {
-// 	button.addEventListener('click', function () {
-// 		let modalId = button.getAttribute('data-modal');
-
-// 		openModal(modalId);
-// 	});
-// });
-
-// closeButtons.forEach(function (button) {
-// 	button.addEventListener('click', function () {
-// 		let modalId = document.querySelector('.modal--open').getAttribute('id');
-// 		closeModal(modalId);
-// 	});
-// });
-
-// window.addEventListener('click', function (event) {
-// 	if (event.target.classList.contains('modal')) {
-// 		let modalId = event.target.getAttribute('id');
-// 		closeModal(modalId);
-// 	}
-// });
-
 document.querySelectorAll('.solutions__card').forEach(card => {
     const cardInner = card.querySelector('.solutions__card-inner');
     const cardText = card.querySelector('.solutions__card-text');
@@ -521,3 +461,58 @@ document.addEventListener("visibilitychange", () => {
         document.hidden ? video.pause() : video.play();
     });
 });
+
+
+(function () {
+    // const fields = document.querySelectorAll('.input__elem');
+
+    // fields.forEach((field) => {
+    //     let fieldWrap = field.closest('.input');
+
+    //     field.addEventListener('change', function () {
+    //         let value = field.value;
+
+    //         if (field.name == 'name') {
+
+    //             if (value.length < 2) {
+    //                 fieldWrap.classList.add('error');
+    //                 fieldWrap.querySelector('.error-msg').innerHTML = 'text';
+    //             } else
+    //                 if (!value.match(/^[a-zР°-СЏС‘]+\s*[a-zР°-СЏС‘]+\s*$/iu)) {
+    //                     fieldWrap.classList.add('error');
+    //                     fieldWrap.querySelector('.error-msg').innerHTML = 'text';
+    //                 } else {
+    //                     fieldWrap.classList.add('complete');
+    //                 }
+
+    //         } else
+    //             if (field.name == 'phone') {
+
+    //                 if (!value.match(/\+7 \d{3} \d{3}-\d{2}-\d{2}/)) {
+    //                     fieldWrap.classList.add('error');
+    //                     fieldWrap.querySelector('.error-msg').innerHTML = 'text';
+    //                 } else {
+    //                     fieldWrap.classList.add('complete');
+    //                 }
+
+    //             }
+
+    //     });
+
+    //     field.addEventListener('input', function () {
+    //         fieldWrap.classList.remove('error', 'complete');
+    //         fieldWrap.querySelector('.error-msg').innerHTML = '';
+    //     });
+    // });
+
+    const phoneFields = document.querySelectorAll('input[name="phone"]');
+    const maskOptions = {
+        mask: '+{7} 000 000-00-00'
+    };
+    phoneFields.forEach((phoneField, index) => {
+        const mask = IMask(phoneField, maskOptions);
+    });
+
+})();
+
+Fancybox.bind("[data-fancybox]");
