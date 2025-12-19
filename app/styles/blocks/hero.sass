@@ -3,7 +3,7 @@
     z-index: 1
     overflow: hidden
     border-radius: 15px
-    padding: 40px 32px @lg 40px 48px @lg 40px 60px
+    padding: 32px @md 40px 32px @lg 40px 48px @lg 40px 60px
 
     background: resolve("content/hero/bg.webp") no-repeat center / cover
 
@@ -12,6 +12,10 @@
         position: absolute 0
         background: rgba(25, 39, 65, 0.9)
         z-index: -1
+
+    &__group
+        display: @lg flex
+        justify-content: @lg space-between
 
     &__title
         color: #fff
@@ -25,5 +29,9 @@
     &__actions
         margin-top: 32px
 
-        .btn
+        .btn--light
             width: @sm-down 100%
+
+    &__docs
+        width: 100% @lg 63%
+        margin: 32px 0 0 @lg 0 0 0 32px

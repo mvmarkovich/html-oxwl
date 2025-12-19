@@ -1,0 +1,33 @@
+.docs
+    &__list
+        display: flex
+        flex-wrap: wrap
+        margin: * -10px
+        margin-bottom: -20px
+
+    &__card
+        flex: 1 1 280px
+        padding: 0 10px
+        margin-bottom: 20px
+
+        &-inner
+            display: block
+            height: 100%
+            padding: 20px
+
+            &:hover
+                .glass-overlay
+                    background: @lg rgba(37, 54, 85, 0.8)
+
+            .glass-content
+                display: flex
+                align-items: center
+
+        &-icon
+            width: 24px
+            max-width: 24px
+            margin-right: 20px
+
+        &-title
+            color: #fff
+            text: 500 16px

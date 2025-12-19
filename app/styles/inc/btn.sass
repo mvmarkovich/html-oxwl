@@ -31,7 +31,17 @@
 		background-color: transparent
 		cursor: pointer
 
+	&--accent
+		color: #fff
+		background: #192741
+		border-color: #192741
+
+		&.btn--arrow-right
+			&:after
+				background-image: resolve("icons/arrow-right-light.svg")
+
 	&--light
+		color: #182640
 		background: #fff
 		border-color: #fff
 

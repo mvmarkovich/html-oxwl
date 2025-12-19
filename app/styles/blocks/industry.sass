@@ -1,0 +1,39 @@
+.industry
+    &__slider
+        margin: 0 -20px @md 0 -10px
+        padding: 0 20px @md 0
+        margin-bottom: @md -20px
+        overflow: hidden
+
+        .swiper-wrapper
+            display: @md flex
+            flex-wrap: @md wrap
+
+    &__card
+        width: 228px @md auto
+        flex: @md 1 1 240px
+        padding: @md 0 10px
+        margin-bottom: @md 20px
+
+        margin-right: @md-down 10px
+
+        &:last-child
+            margin-right: @md-down 0
+
+        &:nth-child(5n + 4),
+        &:nth-child(5n)
+            flex: @md 1 1 360px @lg 1 1 240px
+
+        &-inner
+            height: 100%
+            padding: 32px
+            background: #f6f8fa
+            border-radius: 15px
+            min-height: 180px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+
+        &-title
+            text: 700 18px 1
+            letter-spacing: -0.03em

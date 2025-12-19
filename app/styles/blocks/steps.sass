@@ -1,0 +1,78 @@
+.steps
+    &__row
+        display: flex
+        flex-wrap: wrap
+        margin: * -4px @md * -10px
+        margin-bottom: -8px @md -20px
+
+    &__card
+        width: 100% @md 50% @lg 33.3%
+        padding: 0 4px @md 0 10px
+        margin-bottom: 10px @md 20px
+
+        &:not(.steps__card--empty)
+            counter-increment: count
+
+        &--empty
+            ^&-inner
+                padding: 0
+
+        &-inner
+            position: relative
+            height: 100%
+            padding: 32px
+            background: #f6f8fa
+            border-radius: 15px
+            min-height: 180px
+
+        &-bg
+            position: absolute 0 null null 0
+            size: 100% 
+            object-fit: cover
+            border-radius: 15px
+
+            &--wrap
+                position: relative
+                padding-top: 64.5% @md 0
+                height: auto @md 100%
+                overflow: hidden
+
+        &-count
+            text: 12px
+            border-radius: 100px
+            border: 1px solid #d9d9d9
+            min-height: 28px
+            display: inline-flex
+            align-items: center
+            padding: 0 20px
+            margin-bottom: 24px
+
+            &:after
+                content: ' ' counter(count)
+
+        &-title
+            text: 500 22px 1.1
+            margin-bottom: 0
+
+        &-list
+            list-style: none
+            padding: 0
+            margin: 20px 0 0
+
+            &-item
+                position: relative
+                padding-left: 20px
+                color: #818793
+                text: 16px
+                margin-bottom: 10px
+
+                &:last-child
+                    margin-bottom: 0
+
+                &:before
+                    content: ''
+                    size: 16px
+                    position: absolute
+                    top: 2px
+                    left: 0
+                    background: resolve("icons/checkbox-gray.svg") no-repeat center / contain

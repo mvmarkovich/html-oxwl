@@ -46,7 +46,7 @@
                 background: #192741
 
     &__card
-        counter-increment: chapter 
+        counter-increment: count
         margin-right: 20px
 
         &:last-child
@@ -72,7 +72,7 @@
             display: inline-block
 
             &:after
-                content: ' ' counter(chapter)
+                content: ' ' counter(count)
 
         &-title
             text: 700 20px 1 @md 26p @lg 32px
@@ -90,34 +90,20 @@
             margin: 20px 0 0 @md 0 0 0 32px @lg 0
             flex: @lg 1
             
-            &-list
-                list-style: none
-                padding: 0 @lg 0 24px
-                margin: 0 auto -20px
+            .props__list
+                padding: @lg 0 24px
+                margin: @md auto
 
                 max-width: @md 560px
-                display: flex
-                flex-wrap: wrap
+                flex-direction: row
+                gap: 20px
 
-            &-item
-                width: 50%
-                margin-bottom: 20px
-                display: inline-flex
+            .props__item
+                width: calc(50% - 10px)
                 align-items: flex-start
 
-            &-icon
-                width: 24px
-                max-width: 24px
-                margin-right: 12px
+            .props__icon
                 margin-top: 4px
-
-            &-name
-                text: 500 14px @md 16px
-
-            &-caption
-                color: #9ca3af
-                text: 12px @md 14px
-                margin-top: 6px
 
         &-gallery
             display: flex

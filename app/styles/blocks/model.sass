@@ -1,0 +1,38 @@
+.model
+    &__row
+        display: flex
+        flex-wrap: wrap
+        margin: * -10px
+        margin-bottom: -20px
+
+    &__col
+        width: 100% @lg 33.3%
+        padding: 0 10px
+        margin-bottom: 20px
+        display: flex
+        flex-direction: column
+
+    &__props
+        .props__list
+            flex-direction: @lg-down row
+
+        .props__item
+            width: @lg-down calc(50% - 16px) @sm-down 100%
+
+    &__actions
+        margin-top: 24px
+
+        .btn
+            width: 100%
+            max-width: @sm 400px
+
+    &__img
+        position: @lg-down absolute 0 null null 0
+
+        &--wrap
+            position: @lg-down relative
+            padding-top: @lg-down 60%
+            overflow: @lg-down hidden
+            margin: @lg auto
+
+    

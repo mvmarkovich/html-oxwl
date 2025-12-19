@@ -6,6 +6,12 @@
         padding: 0 20px
         margin: * -20px
 
+    &__row
+        display: flex
+        flex-wrap: wrap
+        margin: * -10px
+        margin-bottom: -20px
+
     &__card
         width: 295px
         min-width: 295px
@@ -24,13 +30,22 @@
             flex-direction: column
             min-height: 200px @md 260px
 
+            &.glass
+                background: transparent
+
+            .glass-content
+                flex: 1
+                display: flex
+                align-items: flex-start
+                flex-direction: column
+
             &:hover
                 ^^&-title
                     &::before
-                        top: -101%
+                        top: @lg -101%
 
                     &:after
-                        top: 0
+                        top: @lg 0
 
         &-title
             position: relative
@@ -38,6 +53,7 @@
             text: 500 40px .9 @md 54px
             overflow: hidden
             display: inline-block
+            margin-bottom: 32px
 
             &:before, &:after
                 color: #192741

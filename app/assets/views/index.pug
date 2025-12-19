@@ -9,7 +9,7 @@ block content
             .container
                 .banner__media
                     img.banner__media-img(src="img/content/banner/card_0.webp" width="1920" height="900" alt="Title banner")
-
+                    
                 .banner__body
                     h1.banner__title Строительство быстровозводимых зданий из металлоконструкций
                     .banner__text.text.-short- <nobr>Производственно-строительная</nobr> компания на базе Подольского завода металлоконструкций
@@ -222,7 +222,9 @@ block content
         .banner
             .container.-flex-end-
                 .banner__media
-                    img.banner__media-img(src="img/content/banner/card_1.webp" width="1920" height="900" alt="Title banner")
+                    video.banner__media-video(autoplay muted loop playsinline preload="none" aria-hidden="true" poster="img/content/banner/card_1.webp" data-src="video/banner_1.mp4")
+                        source(src="video/banner_1.webm" type="video/webm")
+                        source(src="video/banner_1.mp4" type="video/mp4")
 
                 .banner__body
                     .banner__textarea

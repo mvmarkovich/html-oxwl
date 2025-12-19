@@ -19,7 +19,7 @@ function throttle(callee, timeout) {
 function initSwiper(selector, options = {}) {
     console.log(selector);
     const el = document.querySelector(selector);
-    
+
     if (!el) return null;
 
     return new Swiper(el, options);
@@ -273,6 +273,11 @@ let sliderFeatures = initSwiper('.features__slider', {
     slidesPerView: 'auto',
 });
 
+let sliderIndustry = initSwiper('.industry__slider', {
+    loop: false,
+    slidesPerView: 'auto',
+});
+
 if (desktop.matches) {
     if (sliderSpecies) sliderSpecies.destroy();
     if (sliderBenefits) sliderBenefits.destroy();
@@ -281,6 +286,7 @@ if (desktop.matches) {
 if (tablet.matches) {
     if (sliderPartners) sliderPartners.destroy();
     if (sliderFeatures) sliderFeatures.destroy();
+    if (sliderIndustry) sliderIndustry.destroy();
 }
 
 // 
@@ -478,7 +484,7 @@ ymaps.ready(function () {
     };
 
     const firstTab = tabButtons[0];
-    
+
     if (firstTab) {
         setActiveTab(firstTab.dataset.tab);
     }
@@ -490,3 +496,28 @@ ymaps.ready(function () {
         });
     });
 })();
+
+//
+// Videos
+//
+
+const videos = document.querySelectorAll("video[data-src]");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const video = entry.target;
+            video.src = video.dataset.src;
+            video.load();
+            observer.unobserve(video);
+        }
+    });
+});
+
+videos.forEach(video => observer.observe(video));
+
+document.addEventListener("visibilitychange", () => {
+    document.querySelectorAll("video").forEach(video => {
+        document.hidden ? video.pause() : video.play();
+    });
+});
