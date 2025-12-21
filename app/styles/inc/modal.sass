@@ -1,0 +1,55 @@
+.modal
+    display: none
+    background: #192741
+    border-radius: 15px
+    padding: 32px @md 48px
+    width: 100%
+    max-width: 624px
+
+    &:before
+        content: ''
+        size: 100%
+        background: resolve("content/modal/logo-back.svg") no-repeat center -52px / auto 110%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+
+    & > .f-button.is-close-btn
+        top: 20px
+        right: 20px
+        size: 24px
+        opacity: 1
+        background: resolve("icons/cross-light.svg") no-repeat center / contain
+
+        &:hover
+            opacity: @lg .7
+
+        svg
+            display: none
+
+    &__title
+        color: #fff
+        padding-right: 20px
+        margin-bottom: 0
+
+    &__text
+        color: #fff
+        text: 500 14px 1.5 @md 16px
+        margin: 20px 0 0
+
+    &__form
+        margin-top: 24px @md 32px
+
+.is-compact .fancybox__content>.f-button.is-close-btn
+    top: 20px
+    right: 20px
+
+.fancybox__container
+    --fancybox-bg: rgba(0, 0, 0, .8)
+
+.fancybox__slide
+    padding: 40px 20px
+
+.fancybox__container:not(.is-compact) .fancybox__slide.has-close-btn
+    padding: 40px 20px

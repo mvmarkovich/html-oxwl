@@ -1,1 +1,29 @@
 .modal#modal-feedback
+    .modal__square
+        h2.modal__title У вас остались вопросы?
+        .modal__text Заполните форму и наш специалист ответит вам
+
+        form.form.modal__form(action="/.php" method="POST")
+            label.input
+                .input__label Ваше имя *
+                input.input__elem(type="text" name="phone" placeholder="Введите имя")
+
+            label.input
+                .input__label Ваш телефон *
+                input.input__elem(type="text" name="phone" placeholder="Телефон")
+
+            label.input
+                .input__label E-mail *
+                input.input__elem(type="text" name="email" placeholder="E-mail")
+
+            label.input
+                .input__label Сообщение
+                textarea.input__elem(name="msg" placeholder="Введите сообщение" cols="3" rows="3")
+
+            label.input.form__agree 
+                input.input__checkbox(type="checkbox" name="agree") 
+                .input__checkbox-label Нажимая на кнопку, Вы соглашаетесь на <a href="https://baumix.ru/soglasie/" target="_blank">обработку персональных данных</a>
+
+            .form__footer
+                button.btn.btn--light.btn--arrow-right.form__send(type="submit" aria-label="Send form") Заказать расчет
+
