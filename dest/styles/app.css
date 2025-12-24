@@ -1779,6 +1779,10 @@ a.commun__link:hover {
   margin-left: 1.5rem;
 }
 
+.header__burger:before {
+  transition: background-image .4s;
+}
+
 .header-mobile-menu .header__menu {
   display: flex;
   -webkit-animation: fadeIn .4s forwards 0s;
