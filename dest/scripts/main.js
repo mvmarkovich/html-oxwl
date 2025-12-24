@@ -17,7 +17,6 @@ function throttle(callee, timeout) {
 }
 
 function initSwiper(selector, options = {}) {
-    console.log(selector);
     const el = document.querySelector(selector);
 
     if (!el) return null;

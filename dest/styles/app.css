@@ -610,7 +610,6 @@ textarea.input__elem {
   min-width: 1rem;
   background: url('../img/icons/plus-light.svg') no-repeat center / contain;
   margin-left: 1.25rem;
-  transition: .4s background;
 }
 
 .select__btn.is-active:after {
@@ -1691,7 +1690,6 @@ a.commun__link:hover {
   background: url('../img/icons/plus.svg') no-repeat center / 10px;
   display: inline-block;
   margin-left: 0.75rem;
-  transition: .4s;
   opacity: .7;
 }
 
@@ -1777,10 +1775,6 @@ a.commun__link:hover {
 
 .header__burger {
   margin-left: 1.5rem;
-}
-
-.header__burger:before {
-  transition: background-image .4s;
 }
 
 .header-mobile-menu .header__menu {
