@@ -1676,7 +1676,7 @@ a.commun__link:hover {
 
 .header__nav-submenu-link {
   color: rgba(25, 39, 65, .7);
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   text-decoration: none;
   display: inline-block;
@@ -2754,7 +2754,7 @@ a.commun__link:hover {
   position: relative;
   border-radius: 0.9375rem;
   overflow: hidden;
-  padding: 2rem;
+  padding: 1.25rem;
   height: 100%;
   min-height: 23.75rem;
   display: flex;
@@ -2764,17 +2764,12 @@ a.commun__link:hover {
 }
 
 .services__card-inner:hover .services__card-title {
-  margin-bottom: 2rem;
 }
 
 .services__card-inner:hover .services__card-actions {
-  transition: .6s opacity;
-  opacity: 1;
 }
 
 .services__card-inner:hover .services__card-bg {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
 }
 
 .services__card-bg {
@@ -2814,13 +2809,10 @@ a.commun__link:hover {
   font-size: 1.25rem;
   line-height: 1;
   letter-spacing: -0.02em;
-  transition: .4s;
-  margin-bottom: -3.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .services__card-actions {
-  opacity: 0;
-  transition: .2s opacity;
 }
 
 .services__card-actions .btn {
@@ -3532,6 +3524,7 @@ a.commun__link:hover {
   }
 
   .services__card-inner {
+    padding: 1.5rem;
     min-height: 31.25rem;
   }
 
@@ -4002,7 +3995,32 @@ a.commun__link:hover {
   }
 
   .services__card-inner {
+    padding: 2rem;
     border: 0.0625rem solid transparent;
+  }
+
+  .services__card-inner:hover .services__card-title {
+    margin-bottom: 2rem;
+  }
+
+  .services__card-inner:hover .services__card-actions {
+    transition: .6s opacity;
+    opacity: 1;
+  }
+
+  .services__card-inner:hover .services__card-bg {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  .services__card-title {
+    transition: .4s;
+    margin-bottom: -3.75rem;
+  }
+
+  .services__card-actions {
+    opacity: 0;
+    transition: .2s opacity;
   }
 
   .features__card {

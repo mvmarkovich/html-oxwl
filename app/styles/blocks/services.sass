@@ -16,7 +16,7 @@
             position: relative
             border-radius: 15px
             overflow: hidden
-            padding: 32px
+            padding: 20px @md 24px @lg 32px
             border: @lg 1px solid transparent
             height: 100%
             min-height: 380px @md 500px
@@ -28,14 +28,14 @@
 
             &:hover
                 ^^&-title
-                    margin-bottom: 32px
+                    margin-bottom: @lg 32px
 
                 ^^&-actions
-                    transition: .6s opacity
-                    opacity: 1
+                    transition: @lg .6s opacity
+                    opacity: @lg 1
 
                 ^^&-bg
-                    transform: scale(1.05)
+                    transform: @lg scale(1.05)
 
         &-bg
             size: 100%
@@ -59,12 +59,12 @@
             color: #fff
             text: 700 20px 1 @md 32px
             letter-spacing: -0.02em
-            transition: .4s
-            margin-bottom: -60px
+            transition: @lg .4s
+            margin-bottom: 24px @lg -60px
 
         &-actions
-            opacity: 0
-            transition: .2s opacity
+            opacity: @lg 0
+            transition: @lg .2s opacity
 
             .btn
                 width: @sm-down 100%

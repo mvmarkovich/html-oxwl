@@ -42,17 +42,23 @@ function initMobileMenu() {
 }
 
 function setActiveSubmenuItem(current, items) {
-    items.forEach(el => el.classList.remove('active'));
-    current.classList.add('active');
+    if (window.innerWidth >= 1380) {
+        items.forEach(el => el.classList.remove('active'));
+        current.classList.add('active');
+    } else {
+        current.classList.toggle('active');
+    }
 }
 
 function initSubmenu() {
     const navItems = document.querySelectorAll('.header__nav-item');
     navItems.forEach(navItem => {
         const submenu = navItem.querySelector('.header__nav-submenu');
+        
         if (!submenu) return;
 
         const submenuItems = submenu.querySelectorAll('.header__nav-submenu-item');
+
         if (!submenuItems.length) return;
 
         setActiveSubmenuItem(submenuItems[0], submenuItems);
