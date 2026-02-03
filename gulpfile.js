@@ -114,7 +114,7 @@
           extname: '.css'
         }))
         //.pipe(sourcemaps.write('/'))
-        // .pipe(uglifycss())
+        .pipe(uglifycss())
         .pipe(gulp.dest('dest/styles/'))
     );
   });

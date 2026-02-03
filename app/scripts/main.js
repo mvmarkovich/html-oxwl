@@ -105,34 +105,34 @@ function initArrowItems() {
     });
 }
 
-let lastScrollY = window.scrollY;
-let upScrollDistance = 0;
+// let lastScrollY = window.scrollY;
+// let upScrollDistance = 0;
 
 function scrollHeader() {
     const currentScrollY = window.scrollY;
-    const delta = lastScrollY - currentScrollY;
+    // const delta = lastScrollY - currentScrollY;
 
-    if (delta > 0) {
-        upScrollDistance += delta;
+    // if (delta > 0) {
+    //     upScrollDistance += delta;
 
-        if (upScrollDistance >= 100) {
-            header.classList.add('header--visible');
-        }
-    }
+    //     if (upScrollDistance >= 100) {
+    //         header.classList.add('header--visible');
+    //     }
+    // }
 
-    else {
-        upScrollDistance = 0;
-        header.classList.remove('header--visible');
-    }
+    // else {
+    //     upScrollDistance = 0;
+    //     header.classList.remove('header--visible');
+    // }
 
     if (currentScrollY > 100) {
         header.classList.add('header--bg');
     } else {
         header.classList.remove('header--bg');
-        header.classList.remove('header--visible');
+        // header.classList.remove('header--visible');
     }
 
-    lastScrollY = currentScrollY;
+    // lastScrollY = currentScrollY;
 }
 
 function initHeader() {
