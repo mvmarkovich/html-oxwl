@@ -8,6 +8,9 @@
         padding: 0 20px @xl 0 calc((100vw - 1240px) / 2)
         margin: * -20px @xl 0
 
+    .slider-pag
+        display: @md-down none
+
     &__tabs
         overflow: hidden
         padding: 0 20px
@@ -48,6 +51,7 @@
     &__card
         counter-increment: count
         margin-right: 20px
+        height: auto
 
         &:last-child
             margin-right: 0
@@ -55,6 +59,10 @@
         &-inner
             background: #f6f8fa
             border-radius: 15px
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
             padding: 20px @md 24px @lg 40px
 
         &-top
