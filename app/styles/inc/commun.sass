@@ -1,4 +1,22 @@
 .commun
+    &__tr
+        display: @lg flex
+        flex-wrap: @lg nowrap
+        margin-bottom: 24px
+
+        &:last-child
+            margin-bottom: 0
+
+    &__td
+        margin-bottom: 24px @lg 0
+
+        &:first-child
+            min-width: @lg 240px
+            margin-right: @lg 32px
+
+        &:last-child
+            margin-bottom: 0
+
     &__link
         display: inline-flex
         align-items: flex-start
@@ -9,7 +27,7 @@
             white-space: nowrap
 
             &:hover
-                color: rgba(255, 255, 255, .7)
+                color: @lg rgba(255, 255, 255, .7)
         
         &:before
             content: ''
@@ -19,6 +37,7 @@
             background-position: center
             background-size: contain
             margin-right: 10px
+            opacity: .5
 
         &--phone
             &:before
@@ -35,5 +54,42 @@
         &--time
             &:before
                 background-image: resolve("icons/commun/time.svg")
+
+        &--doc
+            &:before
+                background-image: resolve("icons/commun/doc.svg")
+
+    &--dark
+        ^&__link
+            text: 400 16px @lg 20px
+            color: #192741
+
+            &::before
+                size: 24px
+                min-width: 24px
+
+            &--phone
+                &:before
+                    background-image: resolve("icons/commun/phone-dark.svg")
+
+            &--email
+                &:before
+                    background-image: resolve("icons/commun/email-dark.svg")
+
+            &--loc
+                &:before
+                    background-image: resolve("icons/commun/loc-dark.svg")
+
+            &--time
+                &:before
+                    background-image: resolve("icons/commun/time-dark.svg")
+
+            &--doc
+                &:before
+                    background-image: resolve("icons/commun/doc-dark.svg")
+
+        a^&__link
+            &:hover
+                color: rgba(25, 39, 65, .7)
 
     

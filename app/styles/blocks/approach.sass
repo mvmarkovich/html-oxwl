@@ -1,0 +1,45 @@
+.approach
+    position: relative
+    z-index: 1
+    overflow: hidden
+    color: #fff
+    padding: 20px @md 40px 48px
+    background: #192741
+    border-radius: 15px
+
+    .section__headline
+        color: #fff
+
+    &__img
+        transform: rotate(11deg)
+
+        &--wrap
+            position: absolute
+            bottom: -164px @sm -172px @lg -380px
+            right: -190px @sm -216px @lg -182px
+            z-index: -1
+            max-width: 480px @sm 570px @lg 900px
+
+    &__info
+        max-width: 589px
+
+    &__list
+        margin: 16px 0
+
+        li
+            opacity: .7
+
+.warning-panel
+    margin-top: 32px
+
+    .glass-content
+        color: #fff
+        text: 700 20px
+        display: @md flex
+        align-items: @md center
+        padding: 20px @md 32px 40px
+
+    img
+        margin: 0 0 20px @md 0 20px 0 0
+        min-width: 36px
+        max-width: 36px

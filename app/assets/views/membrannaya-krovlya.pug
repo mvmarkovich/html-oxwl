@@ -1,0 +1,191 @@
+extends layouts/layout.pug
+
+block title
+    title Мембранная кровля | OXWL
+
+block content
+    section.section.section--full-width
+        .banner
+            .container
+                .banner__media
+                    picture
+                        source(srcset="img/content/banner/membrannaya-krovlya/card_0-l.webp" media="(min-width: 1025px)")
+                        source(srcset="img/content/banner/membrannaya-krovlya/card_0-m.webp" media="(min-width: 768px)")
+                        img(src="img/content/banner/membrannaya-krovlya/card_0-s.webp" width="1920" height="820" alt="Title banner")
+
+                .banner__body
+                    h1.banner__title Мембранная кровля под ключ
+                    .banner__text.text.-medium- Команда OXWL выполняет полный цикл работ — от обследования крыши и расчёта сметы до монтажа мембраны, устройства примыканий и сдачи объекта. Используем сертифицированные материалы ведущющих производителей и профессиональное сварочное оборудование.
+
+                    .banner__actions
+                        a.btn.btn--light.btn--arrow-right(href="#modal-feedback" data-fancybox) Рассчитать стоимость
+
+    section.section
+        .section__head
+            .section__label Что такое мембранная кровля
+
+            h2.section__title 
+                span Мембранная кровля — 
+                | это современная рулонная гидроизоляционная система на основе полимерных мембран, предназначенная для устройства плоских и эксплуатируемых кровель.
+
+        .features
+            .features__slider.slider-md-down
+                .swiper-wrapper(data-grid-items="4")
+                    each card, i in featuresMembrannayaKrovlya_0
+                        .features__card.swiper-slide
+                            .features__card-inner
+                                .features__card-count тип
+
+                                .features__card-info
+                                    .features__card-title= card.name
+                                    .features__card-text.text= card.text
+
+                    .features__card.features__card--bg.-option-bg-0-.hide-md-down
+                        .features__card-inner
+                            .features__card-img--wrap
+                                img.features__card-img(src="img/content/features/membrannaya-krovlya/card_bg_0.webp" width="266" height="266" alt="Card name")
+
+                            .features__card-info
+                                .features__card-text.text Такие покрытия служат десятилетиями, обеспечивая полную защиту здания от влаги и температурных перепадов.
+
+            .features__card.features__card--bg.-option-bg-0-.hide-md-up
+                .features__card-inner
+                    .features__card-img--wrap
+                        img.features__card-img(src="img/content/features/membrannaya-krovlya/card_bg_0.webp" width="266" height="266" alt="Card name")
+
+                    .features__card-info
+                        .features__card-text.text Такие покрытия служат десятилетиями, обеспечивая полную защиту здания от влаги и температурных перепадов.
+
+    section.section
+        .section__head
+            .section__label Почему мембрана
+
+            h2.section__title 
+                | Преимущества 
+                span мембранной кровли
+
+        .features
+            .features__slider.slider-md-down
+                .swiper-wrapper
+                    each card, i in featuresMembrannayaKrovlya_1
+
+                        .features__card.swiper-slide
+                            .features__card-inner
+                                .features__card-icon--wrap
+                                    img.features__card-icon(src="img/content/features/membrannaya-krovlya/card_" + i + ".svg" width="36" height="36" alt="" + card.name)
+
+                                .features__card-info
+                                    .features__card-title= card.name
+                                    .features__card-text.text= card.text
+
+    section.section.section--full-width
+        .banner.-md-height-medium-
+            .container.-flex-end-
+                .banner__media
+                    picture
+                        source(srcset="img/content/banner/membrannaya-krovlya/card_1-l.webp" media="(min-width: 1025px)")
+                        source(srcset="img/content/banner/membrannaya-krovlya/card_1-m.webp" media="(min-width: 768px)")
+                        img(src="img/content/banner/membrannaya-krovlya/card_1-s.webp" width="1920" height="820" alt="Title banner")
+
+                .banner__body
+                    .banner__textarea
+                        h2 Мы знаем, как должна выглядеть правильная мембранная кровля
+
+                    .banner__actions
+                        a.btn.btn--light.btn--arrow-right(href="#modal-feedback" data-fancybox) Получить консультацию
+
+    section.section
+        .section__head
+            .section__label Материалы и бренды
+
+            h2.section__title 
+                | Мы работаем только 
+                span с проверенными мембранами
+
+            .section__text Все материалы имеют официальные сертификаты, паспорт качества и гарантийные обязательства производителя.
+
+        .partners
+            .partners__slider.slider-md-down
+                .swiper-wrapper
+                    .partners__card.swiper-slide
+                        .partners__card-inner
+                            .partners__card-img--wrap
+                                img.partners__card-img(src="img/content/partners/card_0.svg" width="138" height="95" alt="Name partner")
+
+                    .partners__card.swiper-slide
+                        .partners__card-inner
+                            .partners__card-img--wrap
+                                img.partners__card-img(src="img/content/partners/card_1.svg" width="97" height="71" alt="Name partner")
+
+                    .partners__card.swiper-slide
+                        .partners__card-inner
+                            .partners__card-img--wrap
+                                img.partners__card-img(src="img/content/partners/card_2.svg" width="114" height="25" alt="Name partner")
+
+                    .partners__card.swiper-slide
+                        .partners__card-inner
+                            .partners__card-img--wrap
+                                img.partners__card-img(src="img/content/partners/card_3.svg" width="114" height="25" alt="Name partner")
+
+    section.section
+        .section__head
+            .section__label Гарантии
+
+            h2.section__title 
+                | С нами вы получаете
+
+        .features
+            .features__slider.slider-md-down
+                .swiper-wrapper(data-grid-items="4")
+                    - idx = 5;
+
+                    each card, i in featuresMembrannayaKrovlya_2
+                        - idx++; 
+
+                        .features__card.swiper-slide
+                            .features__card-inner
+                                .features__card-icon--wrap
+                                    img.features__card-icon(src="img/content/features/membrannaya-krovlya/card_" + idx + ".svg" width="36" height="36" alt="" + card.name)
+
+                                .features__card-info
+                                    .features__card-title= card.name
+
+    section.section
+        .section__head
+            .section__label Выполненные проекты
+
+            h2.section__title 
+                | Мы построили 
+                span более 200 объектов
+
+        include blocks/cases
+
+    section.section
+        .hero
+            .hero__group
+                .hero__info
+                    h2.hero__title Консультация специалиста
+                    .hero__text.text Важно правильно выбрать исполнителя, который реализует проект в соответствии с нормами, стандартами, требованиями и пожеланиями заказчика.
+
+                    .hero__actions
+                        a.btn.btn--light.btn--arrow-right(href="#modal-feedback" data-fancybox) Рассчитать стоимость
+
+    section.section
+        .section__head.section__head--row
+            h2.section__title 
+                | Наш опыт - 
+                span надежность, подтверждена цифрами
+
+            .section__text.text Работа на базе Подольского завода металлоконструкций позволяет нам гарантировать высокое качество продукции и соблюдение сроков.
+
+        include blocks/stats
+
+    section.section
+        .section__head.section__head--row
+            h2.section__title 
+                | Наши здания используют 
+                span крупнейшие компании России
+
+            .section__text.text Каждый проект для нас — это уникальная задача. Мы учитываем все пожелания заказчика, предлагая оптимальные технические и экономические решения.
+
+        include blocks/partners

@@ -1,12 +1,37 @@
 .steps
+    &__slider
+        margin: 0 -20px @md 0 -10px
+        padding: 0 20px @md 0
+        margin-bottom: @md -20px
+        overflow: hidden
+
+        .swiper-wrapper
+            // display: @md flex
+            // flex-wrap: @md wrap
+            display: @md grid
+            gap: @md 20px 0
+            grid-template-columns: @md repeat(auto-fit, minmax(340px, 1fr))
+            grid-auto-rows: @md 1fr
+
+        ^&__card
+            margin-bottom: 0
+            width: @md-down 320px
+            height: @md-down auto
+            padding: @md-down 0
+            margin-left: @md-down 20px
+
+            &:first-child
+                margin-left: @md-down 0
+
     &__row
-        display: flex
-        flex-wrap: wrap
+        display: @md grid
+        grid-template-columns: @md repeat(auto-fit, minmax(340px, 1fr))
+        grid-auto-rows: @md 1fr
         margin: * -4px @md * -10px
         margin-bottom: -8px @md -20px
 
     &__card
-        width: 100% @md 50% @lg 33.3%
+        width: 100% @md auto
         padding: 0 4px @md 0 10px
         margin-bottom: 10px @md 20px
 
@@ -17,8 +42,24 @@
             ^&-inner
                 padding: 0
 
+        &--panel
+            grid-column: @lg span 3
+
+            ^&-inner
+                padding: @lg 48px
+                background: #192741
+                overflow: hidden
+                display: flex
+                align-items: center
+
+            ^&-title
+                color: #fff
+                text: 700 22px @md 26px
+                max-width: 220px @lg 430px
+
         &-inner
             position: relative
+            z-index: 1
             height: 100%
             padding: 32px
             background: #f6f8fa
@@ -37,6 +78,16 @@
                 height: auto @md 100%
                 overflow: hidden
 
+        &-img
+            transform: rotate(15deg)
+
+            &--wrap
+                position: absolute
+                top: 0 @lg -120px
+                right: -87px @lg 48px
+                size: 280px @lg 505px
+                z-index: -1
+
         &-count
             text: 12px
             border-radius: 100px
@@ -53,6 +104,9 @@
         &-title
             text: 500 22px 1.1
             margin-bottom: 0
+
+            span
+                color: #818793
 
         &-list
             list-style: none

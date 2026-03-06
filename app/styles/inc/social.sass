@@ -3,6 +3,8 @@
     align-items: center
     
     &__link
+        color: #192741
+        text: 400 20px
         display: inline-flex
         align-items: center
         margin-right: 24px
@@ -14,6 +16,13 @@
             background-repeat: no-repeat
             background-position: center
             background-size: contain
+            opacity: .5
+
+        &:hover
+            opacity: @lg 1
+
+        span
+            margin-left: 10px
 
         &--wa
             &:before
@@ -31,11 +40,11 @@
             &:before
                 background-image: resolve("icons/social/rb.svg")
 
-        &:hover
-            opacity: @lg .7
-
     &--light
         ^&__link
+            &::before
+                opacity: 1
+                
             &--wa
                 &:before
                     background-image: resolve("icons/social/wa-light.svg")
@@ -52,8 +61,14 @@
                 &:before
                     background-image: resolve("icons/social/rb-light.svg")
 
+            &:hover
+                opacity: @lg .7
+
     &--gray
         ^&__link
+            &::before
+                opacity: 1
+
             &--wa
                 &:before
                     background-image: resolve("icons/social/wa-gray.svg")
@@ -69,3 +84,6 @@
             &--rb
                 &:before
                     background-image: resolve("icons/social/rb-gray.svg")
+
+            &:hover
+                opacity: @lg .7

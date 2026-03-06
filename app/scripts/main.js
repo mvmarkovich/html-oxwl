@@ -173,66 +173,114 @@ document.querySelectorAll('.solutions__card').forEach(card => {
 // Sliders
 //
 
-let sliderSteps = initSwiper('.solutions__slider', {
-    loop: false,
-    slidesPerView: 'auto',
-});
+let sliders = document.querySelectorAll('.slider');
 
-let sliderSpecies = initSwiper('.species__slider', {
-    loop: false,
-    slidesPerView: 'auto',
-});
+sliders.forEach(function(slider) {
+    new Swiper(slider, {
+        loop: false,
+        slidesPerView: 'auto',
+    });
+})
 
-let sliderBenefits = initSwiper('.benefits__slider', {
-    loop: false,
-    slidesPerView: 'auto',
-});
+let slidersMdDown = document.querySelectorAll('.slider-md-down');
 
-let sliderCasesTabs = initSwiper('.cases__tabs', {
-    loop: false,
-    slidesPerView: 'auto',
-});
+slidersMdDown.forEach(function(slider) {
+    if (!tablet.matches) {
+        new Swiper(slider, {
+            loop: false,
+            slidesPerView: 'auto',
+        });
+    }
+})
 
-let sliderStats = initSwiper('.stats__slider', {
-    loop: false,
-    slidesPerView: 'auto',
-});
+let slidersLgDown = document.querySelectorAll('.slider-lg-down');
 
-let sliderPartners = initSwiper('.partners__slider', {
-    loop: false,
-    slidesPerView: 'auto',
-});
+slidersLgDown.forEach(function(slider) {
+    if (!desktop.matches) {
+        new Swiper(slider, {
+            loop: false,
+            slidesPerView: 'auto',
+        });
+    }
+})
 
-let sliderServices = initSwiper('.services__slider', {
-    loop: false,
-    slidesPerView: 'auto',
-});
+// let sliderSolutions = initSwiper('.solutions__slider', {
+//     loop: false,
+//     slidesPerView: 'auto',
+// });
 
-let sliderBuildings = initSwiper('.buildings__slider', {
-    loop: false,
-    slidesPerView: 'auto',
-});
+// let sliderSpecies = initSwiper('.species__slider', {
+//     loop: false,
+//     slidesPerView: 'auto',
+// });
 
-let sliderFeatures = initSwiper('.features__slider', {
-    loop: false,
-    slidesPerView: 'auto',
-});
+// let sliderBenefits = initSwiper('.benefits__slider', {
+//     loop: false,
+//     slidesPerView: 'auto',
+// });
 
-let sliderIndustry = initSwiper('.industry__slider', {
-    loop: false,
-    slidesPerView: 'auto',
-});
+// let sliderCasesTabs = initSwiper('.cases__tabs', {
+//     loop: false,
+//     slidesPerView: 'auto',
+// });
 
-if (desktop.matches) {
-    if (sliderSpecies) sliderSpecies.destroy();
-    if (sliderBenefits) sliderBenefits.destroy();
-}
+// let sliderStats = initSwiper('.stats__slider', {
+//     loop: false,
+//     slidesPerView: 'auto',
+// });
 
-if (tablet.matches) {
-    if (sliderPartners) sliderPartners.destroy();
-    if (sliderFeatures) sliderFeatures.destroy();
-    if (sliderIndustry) sliderIndustry.destroy();
-}
+// let sliderPartners = initSwiper('.partners__slider', {
+//     loop: false,
+//     slidesPerView: 'auto',
+// });
+
+// let sliderServices = initSwiper('.services__slider', {
+//     loop: false,
+//     slidesPerView: 'auto',
+// });
+
+// let sliderBuildings = initSwiper('.buildings__slider', {
+//     loop: false,
+//     slidesPerView: 'auto',
+// });
+
+// let sliderWorks = initSwiper('.works__slider', {
+//     loop: false,
+//     slidesPerView: 'auto',
+// });
+
+// let sliderTypes = initSwiper('.types__slider', {
+//     loop: false,
+//     slidesPerView: 'auto',
+// });
+
+// let sliderSteps = initSwiper('.steps__slider', {
+//     loop: false,
+//     slidesPerView: 'auto',
+// });
+
+// let sliderFeatures = initSwiper('.features__slider', {
+//     loop: false,
+//     slidesPerView: 'auto',
+// });
+
+// let sliderIndustry = initSwiper('.industry__slider', {
+//     loop: false,
+//     slidesPerView: 'auto',
+// });
+
+// if (desktop.matches) {
+//     if (sliderSpecies) sliderSpecies.destroy();
+//     if (sliderBenefits) sliderBenefits.destroy();
+// }
+
+// if (tablet.matches) {
+//     if (sliderPartners) sliderPartners.destroy();
+//     if (sliderFeatures) sliderFeatures.destroy();
+//     if (sliderIndustry) sliderIndustry.destroy();
+//     if (sliderTypes) sliderTypes.destroy();
+//     if (sliderSteps) sliderSteps.destroy();
+// }
 
 // 
 // Custom select
@@ -421,6 +469,51 @@ ymaps.ready(function () {
                 requestAnimationFrame(() => {
                     initSlider(section);
                 });
+
+            } else {
+                section.classList.remove(ACTIVE_SECTION);
+            }
+        });
+    };
+
+    const firstTab = tabButtons[0];
+
+    if (firstTab) {
+        setActiveTab(firstTab.dataset.tab);
+    }
+
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (btn.classList.contains(ACTIVE_BTN)) return;
+            setActiveTab(btn.dataset.tab);
+        });
+    });
+})();
+
+//
+// Tabs
+//
+
+(function () {
+    const tabButtons = document.querySelectorAll('.tabs-nav__btn');
+    const sections = document.querySelectorAll('.tabs-section');
+
+    const ACTIVE_BTN = 'tabs-nav__btn--active';
+    const ACTIVE_SECTION = 'tabs-section--active';
+
+    const setActiveTab = (tabName) => {
+        tabButtons.forEach(btn => {
+            btn.classList.toggle(
+                ACTIVE_BTN,
+                btn.dataset.tab === tabName
+            );
+        });
+
+        sections.forEach(section => {
+            const isActive = section.dataset.tab === tabName;
+
+            if (isActive) {
+                section.classList.add(ACTIVE_SECTION);
 
             } else {
                 section.classList.remove(ACTIVE_SECTION);

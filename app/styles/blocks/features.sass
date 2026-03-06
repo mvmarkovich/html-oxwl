@@ -6,39 +6,117 @@
         overflow: hidden
 
         .swiper-wrapper
-            display: @md flex
-            flex-wrap: @md wrap
+            // display: @md flex
+            // flex-wrap: @md wrap
+            display: @md grid
+            grid-template-columns: @md repeat(auto-fit, minmax(340px, 1fr))
+            grid-auto-rows: @md 1fr
+
+            &[data-flex-items="5"]
+                display: @md flex
+                flex-wrap: @md wrap
+
+                ^^^&__card
+                    flex: @md 1 1 210px
+
+            &[data-grid-items="4"]
+                grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)) @lg repeat(auto-fit, minmax(200px, 1fr))
+
+                ^^^&__card
+                    &-inner
+                        min-height: @md 280px
 
     &__card
-        width: 320px @md 50% @lg 33.3%
+        width: 320px @md auto
         height: auto
         padding: @md 0 10px
         margin-bottom: @md 20px
-        margin-right: @md-down 20px
+        margin-left: @md-down 20px
 
-        &:last-child
-            margin-right: @md-down 0
+        &:first-child
+            margin-left: @md-down 0
+
+        &:not(.steps__card--empty)
+            counter-increment: count
 
         &-inner
+            position: relative
+            z-index: 1
             height: 100%
             padding: 32px
             background: #f6f8fa
             border-radius: 15px
-            min-height: 248px @md 280px
-            display: flex
-            flex-direction: column
-            justify-content: space-between
+            // min-height: 248px @md 280px
 
         &-icon
             &--wrap
                 width: 36px
                 max-width: 36px
-                margin-bottom: 12px
+                margin-bottom: 40px @sm 52px
+
+        &-img
+            &--wrap
+                position: absolute
+                bottom: -160px @md -144px
+                right: -142px @md -92px
+                z-index: -1
+                min-width: 492px
+                max-width: 492px
 
         &-title
-            text: 500 18px 1.15 @md 22px
+            text: 500 20px 1.15 @md 22px
 
         &-text
             color: #818793
             margin: 20px 0 0
-            min-height: @md 100px @lg 80px
+            // min-height: @md 100px @lg 80px
+
+        &-count
+            text: 12px
+            border-radius: 100px
+            border: 1px solid #d9d9d9
+            min-height: 28px
+            display: inline-flex
+            align-items: center
+            padding: 0 20px
+            margin-bottom: 48px
+
+            &:before
+                content: counter(count) ' '
+
+        .btn--arrow-right
+            width: @sm-down 100%
+            margin-top: auto
+
+        &--bg
+            width: @md-down 100%
+            margin: @md-down 20px 0 0
+
+            ^&-inner
+                background: #192741
+                display: flex
+                align-items: flex-start
+                flex-direction: column
+                overflow: hidden
+                min-height: @md-down 320px
+
+            ^&-title
+                color: #fff
+                text: @md-down 22px
+
+            ^&-text
+                color: #fff
+                margin: 0
+
+            &.-option-bg-0-
+                ^^&-inner
+                    min-height: @md-down 280px
+
+                ^^&-img
+                    transform: rotate(164deg)
+
+                    &--wrap
+                        right: -70px
+                        bottom: -100px
+                        min-width: 266px
+                        max-width: 266px

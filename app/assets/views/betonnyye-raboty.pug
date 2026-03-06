@@ -1,0 +1,461 @@
+extends layouts/layout.pug
+
+block title
+    title Бетонные работы | OXWL
+
+block content
+    section.section.section--full-width
+        .banner
+            .container
+                .banner__media
+                    picture
+                        source(srcset="img/content/banner/betonnyye-raboty/card_0-l.webp" media="(min-width: 1025px)")
+                        source(srcset="img/content/banner/betonnyye-raboty/card_0-m.webp" media="(min-width: 768px)")
+                        img(src="img/content/banner/betonnyye-raboty/card_0-s.webp" width="1920" height="820" alt="Title banner")
+
+                .banner__body
+                    h1.banner__title Бетонные работы <br /> и устройство <br /> фундаментов под ключ
+                    .banner__text.text.-short- Надёжные фундаменты для коммерческих, складских и промышленных объектов.
+
+                    .banner__actions
+                        a.btn.btn--light.btn--arrow-right(href="#modal-feedback" data-fancybox) Рассчитать стоимость
+                        a.btn.btn--border-light.btn--arrow-right(href="#modal-feedback" data-fancybox) Оставить заявку
+                        
+    section.section
+        .section__head
+            .section__label Преимущества
+
+            h2.section__title 
+                | Почему 
+                span выбирают нас
+
+        .features
+            .features__slider.slider-md-down
+                .swiper-wrapper
+                    each card, i in featuresBetonnyyeRaboty_0
+                        .features__card.swiper-slide
+                            .features__card-inner
+                                .features__card-icon--wrap
+                                    img.features__card-icon(src="img/content/features/betonnyye-raboty/card_" + i + ".svg" width="36" height="36" alt="" + card.name)
+
+                                .features__card-info
+                                    .features__card-title= card.name
+                                    .features__card-text.text= card.text
+
+                    .features__card.features__card--bg.hide-md-down
+                        .features__card-inner
+                            .features__card-img--wrap
+                                img.features__card-img(src="img/content/features/betonnyye-raboty/card_bg_0.webp" width="492" height="492" alt="Бесплатная консультация и расчет стоимости")
+
+                            .features__card-info
+                                .features__card-title Бесплатная консультация и расчет стоимости
+
+                            a.btn.btn--light.btn--arrow-right(href="#modal-feedback" data-fancybox) Оставить заявку
+
+            .features__card.features__card--bg.hide-md-up
+                .features__card-inner
+                    .features__card-img--wrap
+                        img.features__card-img(src="img/content/features/betonnyye-raboty/card_bg_0.webp" width="492" height="492" alt="Бесплатная консультация и расчет стоимости")
+
+                    .features__card-info
+                        .features__card-title Бесплатная консультация и расчет стоимости
+
+                    a.btn.btn--light.btn--arrow-right(href="#modal-feedback" data-fancybox) Оставить заявку
+
+    section.section
+        .section__head
+            .section__label Расчёт нагрузок на фундамент
+
+            h2.section__title 
+                | Зачем нужен технический расчет 
+                <br />
+                span нагрузок на фундамент?
+
+            .section__text.text Фундамент, выполненный по расчёту, обеспечивает надёжность здания, прогнозируемую эксплуатацию и отсутствие проблем в будущем — без избыточных затрат и скрытых рисков.
+
+        .approach
+            .approach__info
+                h3.section__headline К устройству фундамента подходим с инженерной точки зрения, учитывая:
+
+                ul.approach__list.list-check.list-check--light
+                    li Тип и расчётные характеристики грунтов основания;
+                    li Уровень грунтовых вод и гидрогеологические условия;
+                    li Нагрузки от конструкций будущего здания;
+                    li Климатические и эксплуатационные воздействия.
+
+                .approach__img--wrap
+                    img.approach__img(src="img/content/approach/betonnyye-raboty/img_0.webp" width="901" height="901" alt="Title icon")
+
+            .glass.warning-panel
+                .glass-filter
+                .glass-overlay
+                .glass-specular
+
+                .glass-content
+                    img(src="img/content/approach/icon_0.svg" width="36" height="36" alt="Icon")
+                    | Наша задача — построить фундамент, который прослужит десятки лет без проблем
+
+    section.section
+        .section__head
+            .section__label Наши услуги по бетонным работам
+
+            h2.section__title 
+                | Мы выполняем полный <span>комплекс 
+                <br />
+                | бетонных работ</span>
+
+        .works
+            .works__slider.slider
+                .swiper-wrapper
+                    each card, i in worksBetonnyyeRaboty
+                        .works__card.swiper-slide
+                            .works__card-inner
+                                .works__card-img--wrap
+                                    img.works__card-img(src="img/content/works/betonnyye-raboty/card_" + i + ".webp" width="310" height="154" alt="" + card.name)
+
+                                .works__card-info
+                                    .works__card-title= card.name
+                                    .works__card-text.text= card.text
+
+    section.section
+        .hero
+            .hero__group
+                .hero__info
+                    h2.hero__title Консультация специалиста
+                    .hero__text.text Важно правильно выбрать исполнителя, который реализует проект в соответствии с нормами, стандартами, требованиями и пожеланиями заказчика.
+
+                    .hero__actions
+                        a.btn.btn--light.btn--arrow-right(href="#modal-feedback" data-fancybox) Оставить заявку
+
+    section.section
+        .section__head
+            .section__label Фундаменты
+
+            h2.section__title 
+                | Типы фундаментов, 
+                span которые мы строим
+
+        .types
+            .types__slider.slider-md-down
+                .swiper-wrapper
+                    each card, i in typesBetonnyyeRaboty
+                        .types__card.swiper-slide
+                            .types__card-inner
+                                .types__card-bg--wrap
+                                    img.types__card-bg(src="img/content/types/betonnyye-raboty/card_0.webp" width="610" height="310" alt="" + card.name)
+
+                                .types__card-info
+                                    .types__card-text.text!= card.text
+                                    h3.types__card-title.h4= card.name
+
+    section.section.section--full-width
+        .banner.-height-medium-
+            .container
+                .banner__media
+                    picture
+                        source(srcset="img/content/banner/betonnyye-raboty/card_0-l.webp" media="(min-width: 1025px)")
+                        source(srcset="img/content/banner/betonnyye-raboty/card_0-m.webp" media="(min-width: 768px)")
+                        img(src="img/content/banner/betonnyye-raboty/card_0-s.webp" width="1920" height="820" alt="Title banner")
+
+    section.section
+        .section__head
+            .section__label Качество
+
+            h2.section__title 
+                | Контроль качества 
+                span и соблюдение <br /> строительных норм
+
+        .features
+            .features__slider.slider-md-down
+                .swiper-wrapper
+                    - idx = 4;
+
+                    each card, i in featuresBetonnyyeRaboty_1
+                        - idx++; 
+                        .features__card.swiper-slide
+                            .features__card-inner
+                                .features__card-icon--wrap
+                                    img.features__card-icon(src="img/content/features/betonnyye-raboty/card_" + idx + ".svg" width="36" height="36" alt="" + card.name)
+
+                                .features__card-info
+                                    .features__card-title= card.name
+                                    .features__card-text.text= card.text
+
+    section.section.section--padding
+        .section__bg--wrap
+            picture
+                source(srcset="img/content/sections-bg/betonnyye-raboty/bg_0-l.webp" media="(min-width: 1025px)")
+                source(srcset="img/content/sections-bg/betonnyye-raboty/bg_0-m.webp" media="(min-width: 768px)")
+                img(src="img/content/sections-bg/betonnyye-raboty/bg_0-s.webp" width="1920" height="820" alt="Title section")
+
+        .section__head
+            .section__label Защита фундамента
+
+            h2.section__title 
+                | Гидроизоляция 
+                span и защита фундамента
+
+        .points
+            .points__content
+                ul.list-check.list-check--light
+                    li Комплексная защита от влаги;
+                    li Горизонтальная и вертикальная гидроизоляция;
+                    li Утепление фундамента;
+                    li Дренажная система;
+                    li Защита от промерзания и деформаций;
+                    li Долговечность и надежность.
+
+            .points__actions
+                a.btn.btn--light.btn--arrow-right(href="#modal-feedback" data-fancybox) Получить консультацию
+
+    section.section
+        .section__head
+            .section__label Этапы
+
+            h2.section__title 
+                | Этапы выполнения работ
+
+        .steps
+            .steps__slider.slider-md-down
+                .swiper-wrapper
+                    each card, i in stepsBetonnyyeRaboty
+                        .steps__card.swiper-slide
+                            .steps__card-inner
+                                .steps__card-count Этап
+
+                                .steps__card-title= card.name
+
+                    .steps__card.steps__card--panel.swiper-slide
+                        .steps__card-inner
+                            .steps__card-title 
+                                span Все этапы выполняются строго 
+                                | по технологии
+
+                            .steps__card-img--wrap
+                                img.steps__card-img(src="img/content/steps/img.webp" width="507" height="507" alt="Title card")
+
+    section.section.section--padding
+        .section__bg--wrap
+            picture
+                source(srcset="img/content/sections-bg/betonnyye-raboty/bg_1-l.webp" media="(min-width: 1025px)")
+                source(srcset="img/content/sections-bg/betonnyye-raboty/bg_1-m.webp" media="(min-width: 768px)")
+                img(src="img/content/sections-bg/betonnyye-raboty/bg_1-s.webp" width="1920" height="820" alt="Title section")
+
+        .section__head
+            .section__label Сроки
+
+            h2.section__title 
+                | Сроки выполнения 
+                span бетонных работ
+
+        .points
+            .points__content
+                .points__grid
+                    .points__card
+                        .points__card-inner.glass
+                            .glass-filter
+                            .glass-overlay
+                            .glass-specular
+
+                            .glass-content
+                                .points__card-title.h4 Планирование до начала работ
+                                .points__card-text.text Сроки формируются после анализа проекта, инженерных изысканий и условий строительной площадки.
+
+                    .points__card
+                        .points__card-inner.glass
+                            .glass-filter
+                            .glass-overlay
+                            .glass-specular
+
+                            .glass-content
+                                .points__card-title.h4 Работа по утверждённому графику
+                                .points__card-text.text Бетонные работы выполняются в соответствии с согласованным графиком производства работ без хаотичных ускорений.
+
+                    .points__card
+                        .points__card-inner.glass
+                            .glass-filter
+                            .glass-overlay
+                            .glass-specular
+
+                            .glass-content
+                                .points__card-title.h4 Соблюдение технологических пауз
+                                .points__card-text.text Технологические перерывы являются частью процесса и не сокращаются в ущерб качеству конструкций.
+
+                    .points__card
+                        .points__card-inner.glass
+                            .glass-filter
+                            .glass-overlay
+                            .glass-specular
+
+                            .glass-content
+                                .points__card-title.h4 Контроль и прогнозируемость
+                                .points__card-text.text Ход работ контролируется на каждом этапе, что позволяет соблюдать запланированные сроки без потери качества.
+
+                .points__caption Сроки устройства фундамента формируются индивидуально и зависят от типа фундамента, объёма работ, инженерно-геологических условий площадки и проектных решений.
+
+    section.section
+        .section__head
+            .section__label Преимущества
+
+            h2.section__title 
+                | Почему 
+                span выбирают нас
+
+        .features
+            .features__slider.slider-md-down
+                .swiper-wrapper
+                    - idx = 10;
+
+                    each card, i in featuresBetonnyyeRaboty_2
+                        - idx++; 
+
+                        .features__card.swiper-slide
+                            .features__card-inner
+                                .features__card-icon--wrap
+                                    img.features__card-icon(src="img/content/features/betonnyye-raboty/card_" + idx + ".svg" width="36" height="36" alt="" + card.name)
+
+                                .features__card-info
+                                    .features__card-title= card.name
+                                    .features__card-text.text= card.text
+
+    section.section
+        .feedback.feedback--email
+            .feedback__row
+                .feedback__info
+                    h2.feedback__title У вас остались вопросы?
+                    .feedback__text.text Заполните форму и наш специалист ответит вам
+
+                    .feedback__img--wrap
+                        img.feedback__img(src="img/content/feedback/option_1.webp" width="1296" height="729" alt="Title feedback")
+
+                form.feedback__form(action="/.php" method="POST")
+                    label.input
+                        .input__label Ваше имя *
+                        input.input__elem(type="text" name="name" placeholder="Введите имя" required)
+
+                    label.input
+                        .input__label Ваш телефон *
+                        input.input__elem(type="text" name="phone" placeholder="Телефон" required)
+
+                    label.input
+                        .input__label E-mail *
+                        input.input__elem(type="email" name="email" placeholder="E-mail" required)
+
+                    label.input
+                        .input__label Сообщение
+                        textarea.input__elem(rows="2" cols="2" name="msg" placeholder="Введите сообщение")
+
+                    label.input.form__agree 
+                        input.input__checkbox(type="checkbox" name="agree") 
+                        .input__checkbox-label Нажимая на кнопку, Вы соглашаетесь на <a href="https://baumix.ru/soglasie/" target="_blank">обработку персональных данных</a>
+
+                    .form__footer
+                        button.btn.btn--light.btn--arrow-right.form__send(type="submit" aria-label="Send form") Заказать расчет
+
+    section.section
+        .section__grid
+            .section__col
+                .section__head
+                    .section__label Ошибки
+
+                    h2.section__title 
+                        | Типичные ошибки при 
+                        span устройстве фундамента
+
+                    .section__text Мы исключаем эти ошибки и строим фундамент на десятилетия.
+
+            .section__col
+                .mistake
+                    .mistake__card
+                        .mistake__card-icon--wrap
+                            img.mistake__card-icon(src="img/icons/cross-red.svg" width="24" height="24" alt="Cross")
+
+                        .mistake__card-title.h4 Игнорирование инженерно-геологических изысканий
+
+                    .mistake__card
+                        .mistake__card-icon--wrap
+                            img.mistake__card-icon(src="img/icons/cross-red.svg" width="24" height="24" alt="Cross")
+
+                        .mistake__card-title.h4 Отсутствие или упрощение инженерных расчётов
+
+                    .mistake__card
+                        .mistake__card-icon--wrap
+                            img.mistake__card-icon(src="img/icons/cross-red.svg" width="24" height="24" alt="Cross")
+
+                        .mistake__card-title.h4 Нарушение технологии бетонирования
+
+                    .mistake__card
+                        .mistake__card-icon--wrap
+                            img.mistake__card-icon(src="img/icons/cross-red.svg" width="24" height="24" alt="Cross")
+
+                        .mistake__card-title.h4 Отсутствие ухода за бетоном
+
+                    .mistake__card
+                        .mistake__card-icon--wrap
+                            img.mistake__card-icon(src="img/icons/cross-red.svg" width="24" height="24" alt="Cross")
+
+                        .mistake__card-title.h4 Обратная засыпка без уплотнения
+
+    section.section
+        .section__head
+            .section__label Доверие
+
+            h2.section__title 
+                | Почему нам 
+                span доверяют
+
+        .features
+            .features__slider.slider-md-down
+                .swiper-wrapper(data-flex-items="5")
+                    - idx = 16;
+
+                    each card, i in featuresBetonnyyeRaboty_3
+                        - idx++; 
+
+                        .features__card.swiper-slide
+                            .features__card-inner
+                                .features__card-icon--wrap
+                                    img.features__card-icon(src="img/content/features/betonnyye-raboty/card_" + idx + ".svg" width="36" height="36" alt="" + card.name)
+
+                                .features__card-info
+                                    .features__card-title= card.name
+
+    section.section
+        .section__head
+            .section__label Выполненные проекты
+
+            h2.section__title 
+                | Мы построили 
+                span более 200 объектов
+
+        include blocks/cases
+
+    section.section
+        .hero
+            .hero__group
+                .hero__info
+                    h2.hero__title Консультация специалиста
+                    .hero__text.text Важно правильно выбрать исполнителя, который реализует проект в соответствии с нормами, стандартами, требованиями и пожеланиями заказчика.
+
+                    .hero__actions
+                        a.btn.btn--light.btn--arrow-right(href="#modal-feedback" data-fancybox) Рассчитать стоимость
+
+    section.section
+        .section__head.section__head--row
+            h2.section__title 
+                | Наш опыт - 
+                span надежность, подтверждена цифрами
+
+            .section__text.text Работа на базе Подольского завода металлоконструкций позволяет нам гарантировать высокое качество продукции и соблюдение сроков.
+
+        include blocks/stats
+
+    section.section
+        .section__head.section__head--row
+            h2.section__title 
+                | Наши здания используют 
+                span крупнейшие компании России
+
+            .section__text.text Каждый проект для нас — это уникальная задача. Мы учитываем все пожелания заказчика, предлагая оптимальные технические и экономические решения.
+
+        include blocks/partners

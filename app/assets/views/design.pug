@@ -15,8 +15,8 @@ block content
                     .banner__text.text Комплексный проектный подход: архитектура, конструктив, инженерия, согласования. Надёжно, точно, под ваши задачи.
 
                     .banner__actions
-                        button.btn.btn--light.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Рассчитать стоимость
-                        button.btn.btn--border-light.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Получить референс лист
+                        a.btn.btn--light.btn--arrow-right(href="#modal-feedback" data-fancybox) Рассчитать стоимость
+                        a.btn.btn--border-light.btn--arrow-right(href="#modal-feedback" data-fancybox) Получить референс лист
 
     section.section
         .section__head
@@ -28,7 +28,7 @@ block content
                 span виды зданий и сооружений
 
         .buildings
-            .buildings__slider
+            .buildings__slider.slider
                 .swiper-wrapper
                     .buildings__card.swiper-slide
                         .buildings__card-inner
@@ -79,12 +79,12 @@ block content
                 span преимущества
 
         .features
-            .features__slider
+            .features__slider.slider-md-down
                 .swiper-wrapper
                     .features__card.swiper-slide
                         .features__card-inner
                             .features__card-icon--wrap
-                                img.features__card-icon(src="img/content/features/card_0.svg" width="36" height="36" alt="Title card")
+                                img.features__card-icon(src="img/content/features/design/card_0.svg" width="36" height="36" alt="Title card")
 
                             .features__card-info
                                 .features__card-title Сильная интеграция
@@ -93,7 +93,7 @@ block content
                     .features__card.swiper-slide
                         .features__card-inner
                             .features__card-icon--wrap
-                                img.features__card-icon(src="img/content/features/card_1.svg" width="36" height="36" alt="Title card")
+                                img.features__card-icon(src="img/content/features/design/card_1.svg" width="36" height="36" alt="Title card")
 
                             .features__card-info
                                 .features__card-title Документация
@@ -102,7 +102,7 @@ block content
                     .features__card.swiper-slide
                         .features__card-inner
                             .features__card-icon--wrap
-                                img.features__card-icon(src="img/content/features/card_2.svg" width="36" height="36" alt="Title card")
+                                img.features__card-icon(src="img/content/features/design/card_2.svg" width="36" height="36" alt="Title card")
 
                             .features__card-info
                                 .features__card-title Сроки
@@ -111,7 +111,7 @@ block content
                     .features__card.swiper-slide
                         .features__card-inner
                             .features__card-icon--wrap
-                                img.features__card-icon(src="img/content/features/card_3.svg" width="36" height="36" alt="Title card")
+                                img.features__card-icon(src="img/content/features/design/card_3.svg" width="36" height="36" alt="Title card")
 
                             .features__card-info
                                 .features__card-title Цена
@@ -120,7 +120,7 @@ block content
                     .features__card.swiper-slide
                         .features__card-inner
                             .features__card-icon--wrap
-                                img.features__card-icon(src="img/content/features/card_4.svg" width="36" height="36" alt="Title card")
+                                img.features__card-icon(src="img/content/features/design/card_4.svg" width="36" height="36" alt="Title card")
 
                             .features__card-info
                                 .features__card-title Гарантия
@@ -129,7 +129,7 @@ block content
                     .features__card.swiper-slide
                         .features__card-inner
                             .features__card-icon--wrap
-                                img.features__card-icon(src="img/content/features/card_5.svg" width="36" height="36" alt="Title card")
+                                img.features__card-icon(src="img/content/features/design/card_5.svg" width="36" height="36" alt="Title card")
 
                             .features__card-info
                                 .features__card-title Подход
@@ -176,7 +176,7 @@ block content
                                     .props__item-caption Замер и составление сметы
 
                     .model__actions
-                        button.btn.btn--accent.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Получить консультацию
+                        a.btn.btn--accent.btn--arrow-right(href="#modal-feedback" data-fancybox) Получить консультацию
 
                 .model__col
                     .model__img--wrap
@@ -262,7 +262,7 @@ block content
                         h2 Проектирование объектов любых площадей — от 500 м² до 50 000 м²
 
                     .banner__actions
-                        button.btn.btn--light.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Получить консультацию
+                        a.btn.btn--light.btn--arrow-right(href="#modal-feedback" data-fancybox) Получить консультацию
 
                 .banner__stats
                     .stats__row
@@ -306,7 +306,7 @@ block content
                 | для различных отраслей </span>
 
         .industry
-            .industry__slider
+            .industry__slider.slider-md-down
                 .swiper-wrapper
                     .industry__card.swiper-slide
                         .industry__card-inner
@@ -396,7 +396,7 @@ block content
                     .hero__text.text Важно правильно выбрать исполнителя, который реализует проект в соответствии с нормами, стандартами, требованиями и пожеланиями заказчика.
 
                     .hero__actions
-                        button.btn.btn--light.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Рассчитать стоимость
+                        a.btn.btn--light.btn--arrow-right(href="#modal-feedback" data-fancybox) Рассчитать стоимость
 
     section.section
         .section__head
@@ -472,4 +472,4 @@ block content
                     .hero__text.text Подготовим быстрый расчет стоимости проектирования вашего объекта <br /> в течение 1 рабочего дня
 
                     .hero__actions
-                        button.btn.btn--light.btn--arrow-right(data-modal="modal-feedback" aria-label="Open modal") Оставить заявку
+                        a.btn.btn--light.btn--arrow-right(href="#modal-feedback" data-fancybox) Оставить заявку

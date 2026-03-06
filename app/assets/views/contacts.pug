@@ -1,0 +1,185 @@
+extends layouts/layout.pug
+
+block title
+    title Контакты | OXWL
+
+block content
+    section.section.section--full-width
+        .banner.-height-low-
+            .container
+                .banner__media
+                    img.banner__media-img(src="img/content/banner/card_5.webp" width="1920" height="440" alt="Title banner")
+                    
+                .banner__body
+                    h1.banner__title Контактная информация
+
+    section.section
+        .contacts
+            .tabs-nav
+                ul.tabs-nav__list
+                    li.tabs-nav__item
+                        button.btn.btn--reset.tabs-nav__btn(data-tab="contacts" aria-label="Toggle tab") Контактная информация
+
+                    li.tabs-nav__item
+                        button.btn.btn--reset.tabs-nav__btn(data-tab="materials" aria-label="Toggle tab") Материалы для скачивания
+
+            .tabs-section(data-tab="contacts")
+                .commun.commun--dark.contacts__commun
+                    .commun__tr
+                        .commun__td
+                            a.commun__link.commun__link--phone(href="tel:+74957890370" title="Позвонить по: +7 (495) 789 03 70") +7 (495) 789 03 70
+
+                        .commun__td
+                            a.commun__link.commun__link--email(href="mailto:mail@oxwl.ru" title="Написать: mail@oxwl.ru") mail@oxwl.ru
+
+                    .commun__tr
+                        .commun__td
+                            .commun__link.commun__link--time Пн-пт 09:00 - 18:00
+
+                        .commun__td
+                            .commun__link.commun__link--loc 142116, Московская область, г. Подольск Ремонтный проезд, д. 6
+
+                .social.contacts__social
+                    a.social__link.social__link--max(href="#max" target="_blank" title="Перейти в Max") 
+                        span Max
+                    a.social__link.social__link--tg(href="https://t.me/oxwl2004" target="_blank" title="Перейти в Telegram") 
+                        span Telegram
+                    a.social__link.social__link--rb(href="https://rutube.ru/channel/58294412/" target="_blank" title="Перейти в Rutube") 
+                        span Rutube
+
+                .contacts__group
+                    .contacts__card
+                        .contacts__card-inner
+                            .contacts__card-name Отдел снабжения
+                            
+                            .commun.commun--dark.contacts__card-commun
+                                a.commun__link.commun__link--phone(href="tel:+79685644157" title="Позвонить по: +7 (968) 564 41 57") +7 (968) 564 41 57
+                                a.commun__link.commun__link--email(href="mailto:snab@oxwl.ru" title="Написать: snab@oxwl.ru") snab@oxwl.ru
+
+                    .contacts__card
+                        .contacts__card-inner
+                            .contacts__card-name Бухгалтерия
+                            
+                            .commun.commun--dark.contacts__card-commun
+                                a.commun__link.commun__link--email(href="mailto:buh@oxwl.ru" title="Написать: buh@oxwl.ru") buh@oxwl.ru
+
+                    .contacts__card
+                        .contacts__card-inner
+                            .contacts__card-name Производство
+                            
+                            .commun.commun--dark.contacts__card-commun
+                                a.commun__link.commun__link--phone(href="tel:+70000000000" title="Позвонить по: +7 (000) 000 00 00") +7 (000) 000 00 00
+
+                    .contacts__card
+                        .contacts__card-inner
+                            .contacts__card-name Проектирование
+                            
+                            .commun.commun--dark.contacts__card-commun
+                                a.commun__link.commun__link--phone(href="tel:+79685644159" title="Позвонить по: +7 (968) 564 41 59") +7 (968) 564 41 59
+
+                    .contacts__card
+                        .contacts__card-inner
+                            .contacts__card-name Отдел продаж
+                            
+                            .commun.commun--dark.contacts__card-commun
+                                a.commun__link.commun__link--phone(href="tel:+74957890370" title="Позвонить по: +7 (495) 789 03 70") +7 (495) 789 03 70
+                                a.commun__link.commun__link--email(href="mailto:info@oxwl.ru" title="Написать: info@oxwl.ru") info@oxwl.ru
+
+                .contacts__details.section
+                    h2.contacts__title Реквизиты компании
+
+                    ul.contacts__details-list
+                        li.contacts__details-item
+                            .contacts__details-label Полное наименование
+                            .contacts__details-value Общество с ограниченной ответственностью «ОксВел»
+
+                        li.contacts__details-item
+                            .contacts__details-label ИНН
+                            .contacts__details-value 5074070097
+
+                        li.contacts__details-item
+                            .contacts__details-label КПП
+                            .contacts__details-value 507401001
+
+                        li.contacts__details-item
+                            .contacts__details-label Юридический адрес
+                            .contacts__details-value 142116, Московская обл., г.о. Подольск, г. Подольск, Ремонтный проезд, д.6 стр. 4, помещение. А, А1
+
+                        li.contacts__details-item
+                            .contacts__details-label ОГРН
+                            .contacts__details-value 1215000065499
+
+                        li.contacts__details-item
+                            .contacts__details-label ОКПО
+                            .contacts__details-value 48257352
+
+                        li.contacts__details-item
+                            .contacts__details-label ОКВЭД
+                            .contacts__details-value 41.20
+
+                        li.contacts__details-item
+                            .contacts__details-label ОКАТО
+                            .contacts__details-value 46460000000
+
+            .tabs-section(data-tab="materials")
+                h2.contacts__title Материалы для скачивания
+
+                .contacts__group.-flex-width-less-
+                    .contacts__card
+                        .contacts__card-inner
+                            .contacts__card-name Реквезиты
+                            
+                            .commun.commun--dark.contacts__card-commun
+                                a.commun__link.commun__link--doc(href="#doc" title="Скачать реквезиты" download) Скачать
+
+                    .contacts__card
+                        .contacts__card-inner
+                            .contacts__card-name Референс лист
+                            
+                            .commun.commun--dark.contacts__card-commun
+                                a.commun__link.commun__link--doc(href="#doc" title="Скачать референс лист" download) Скачать
+
+                    .contacts__card
+                        .contacts__card-inner
+                            .contacts__card-name Презентация
+                            
+                            .commun.commun--dark.contacts__card-commun
+                                a.commun__link.commun__link--doc(href="#doc" title="Скачать презентацию" download) Скачать
+
+    section.section
+        .feedback.feedback--email
+            .feedback__row
+                .feedback__info
+                    h2.feedback__title У вас остались вопросы?
+                    .feedback__text.text Заполните форму и наш специалист ответит вам
+
+                    .feedback__img--wrap
+                        img.feedback__img(src="img/content/feedback/option_1.webp" width="1296" height="729" alt="Title feedback")
+
+                form.feedback__form(action="/.php" method="POST")
+                    label.input
+                        .input__label Ваше имя *
+                        input.input__elem(type="text" name="name" placeholder="Введите имя" required)
+
+                    label.input
+                        .input__label Ваш телефон *
+                        input.input__elem(type="text" name="phone" placeholder="Телефон" required)
+
+                    label.input
+                        .input__label E-mail *
+                        input.input__elem(type="email" name="email" placeholder="E-mail" required)
+
+                    label.input
+                        .input__label Сообщение
+                        textarea.input__elem(rows="2" cols="2" name="msg" placeholder="Введите сообщение")
+
+                    label.input.form__agree 
+                        input.input__checkbox(type="checkbox" name="agree") 
+                        .input__checkbox-label Нажимая на кнопку, Вы соглашаетесь на <a href="https://baumix.ru/soglasie/" target="_blank">обработку персональных данных</a>
+
+                    .form__footer
+                        button.btn.btn--light.btn--arrow-right.form__send(type="submit" aria-label="Send form") Заказать расчет
+
+
+
+

@@ -1,0 +1,50 @@
+.points
+    &__content
+        ul
+            text: 16px
+
+    &__caption
+        color: #fff
+        text: 700 20px @md 26px
+        margin: 40px 0 0
+
+    &__actions
+        margin-top: 24px @sm 40px
+
+        .btn
+            width: @sm-down 100%
+
+    &__grid
+        display: grid
+        gap: 20px
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
+        grid-auto-rows: 1fr
+
+    &__card
+        &-inner
+            height: 100%
+            padding: 20px @md 36px
+
+        &-title
+            color: #fff
+            text: 500
+            margin: 0
+
+        &-text
+            color: #fff
+            margin: 24px 0 0
+
+    &__panel
+        margin-top: 32px
+
+        .glass-content
+            color: #fff
+            text: 700 20px
+            display: flex
+            align-items: center
+            padding: 32px 40px
+
+        img
+            margin-right: 20px
+            min-width: 36px
+            max-width: 36px

@@ -1,0 +1,45 @@
+.tabs-nav
+    overflow: hidden
+    padding: 0 20px
+    max-height: 52px
+    margin: * -20px
+    margin-bottom: 32px @lg 60px
+    
+    &__list
+        display: flex
+        list-style: none
+        padding: 0 20px 48px
+        margin: 0 -20px
+        overflow: auto
+
+    &__item
+        width: auto
+        margin-right: 10px
+
+        &:last-child
+            margin-right: 0
+
+    &__btn
+        color: #7f8a9b
+        text: 500 16px 
+        white-space: nowrap
+        background: #f6f8fa
+        padding: 0 32px
+        min-height: 52px
+        border-radius: 15px
+
+        &:hover
+            color: @lg #fff
+            background: @lg #253655
+
+        &--active
+            pointer-events: none
+            color: #fff
+            background: #192741
+
+.tabs-section
+    display: none
+
+    &--active
+        display: block
+        animation: .4s fadeIn forwards

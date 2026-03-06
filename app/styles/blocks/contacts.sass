@@ -1,0 +1,71 @@
+.contacts
+    &__title
+        margin-bottom: 32px
+            
+    &__commun
+        margin-bottom: 40px @lg 60px
+
+    &__social
+        flex-direction: @sm-down column
+        align-items: @sm-down flex-start
+        flex-wrap: wrap
+        margin: 40px 0 @lg 60px 0
+        gap: 24px 8px @lg 24px
+
+    &__group
+        display: flex
+        flex-wrap: wrap
+        gap: 10px @sm 20px
+
+        &.-flex-width-less-
+            ^^&__card
+                flex: 1 1 230px
+
+    &__card
+        flex: 1 1 310px
+
+        &-inner
+            background: #f6f8fa
+            border-radius: 20px
+            padding: 32px
+            height: 100%
+
+        &-name
+            text: 700 20px @lg 26px
+            margin-bottom: 24px
+
+        &-commun
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+
+            .commun__link
+                margin-bottom: 1rem
+
+                &:last-child
+                    margin: 0
+
+    &__details
+        &-list
+            list-style: none
+            padding: 0
+            margin: 0
+
+        &-item
+            display: @sm flex
+            padding: 16px 0
+            border-bottom: 1px solid rgba(0, 0, 0, .1)
+
+            &:first-child
+                border-top: 1px solid rgba(0, 0, 0, .1)
+
+        &-label, &-value
+            text: 14px 1.56 @lg 16px
+
+        &-label
+            color: rgba(25, 39, 65, .5)
+            margin-right: @sm 20px
+            min-width: @sm 36.6% @lg 400px
+            max-width: @sm 36.6% @lg 400px
+            margin-bottom: 10px @sm 0
+
