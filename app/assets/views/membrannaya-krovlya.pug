@@ -58,6 +58,61 @@ block content
 
     section.section
         .section__head
+            .section__label Технические составляющие
+
+            h2.section__title 
+                | Устройство 
+                span мембранной кровли
+
+            .section__text Многослойная система, обеспечивающая герметичность, теплоизоляцию и долговечность кровли
+
+        .roof-structure
+            img.roof-structure__logo-back(src="img/icons/logo-bg.svg" width="512" height="512" alt="OXWL")
+
+            .roof-structure__img--wrap
+                picture 
+                    source(srcset="img/content/roof-structure/roof-l.webp" media="(min-width: 1025px)")
+                    source(srcset="img/content/roof-structure/roof-m.webp" media="(min-width: 580px)")
+                    img(src="img/content/roof-structure/roof-s.webp" width="1920" height="820" alt="Title roof")
+
+            ul.roof-structure__list
+                li.roof-structure__list-item Кровельная ПВХ-мембранна
+                li.roof-structure__list-item Саморез сверлоконечный
+                li.roof-structure__list-item Стеклохолст ТЕХНОНИКОЛЬ
+                li.roof-structure__list-item XPS ТЕХНОНИКОЛЬ CARBON PROF
+                li.roof-structure__list-item XPS ТЕХНОНИКОЛЬ CARBON PROF SLOPE-4,2%
+                li.roof-structure__list-item ТЕХНОРУФ Н Оптима
+                li.roof-structure__list-item Паробарьер СА500
+                li.roof-structure__list-item Профилированный лист
+
+        .features.mt-2.mt-md-4
+            .features__slider.slider-md-down
+                .swiper-wrapper
+                    each card, i in featuresRoof
+                        .features__card.swiper-slide
+                            .features__card-inner
+                                .features__card-count.-first-zero-
+
+                                .features__card-info
+                                    .features__card-title= card.name
+                                    .features__card-text.text= card.text
+
+        .tech-panel.mt-2.mt-md-4.-option-0-
+            .tech-panel__info
+                h3.tech-panel__title Применяемые технологии OXWL
+
+                .tech-panel__headline Мы используем:
+                
+                ul.list-check.list-check--light
+                    li профессиональное сварочное оборудование (горячий воздух);
+                    li сертифицированные мембраны ведущих производителей;
+                    li монтаж строго по технологическим картам и СНиП.
+
+            .tech-panel__img--wrap
+                img.tech-panel__img(src="img/content/tech-panel/img_0.webp" width="768" height="768" alt="Применяемые технологии OXWL")
+
+    section.section
+        .section__head
             .section__label Почему мембрана
 
             h2.section__title 
@@ -93,6 +148,77 @@ block content
 
                     .banner__actions
                         a.btn.btn--light.btn--arrow-right(href="#modal-feedback" data-fancybox) Получить консультацию
+
+    section.section
+        .cost-product
+            .cost-product__info
+                .cost-product__col
+                    h2.cost-product__title Стоимость мембранной кровли
+
+                .cost-product__col
+                    .cost-product__headline От чего зависит цена?
+
+                    ul.list-check.list-check--light
+                        li тип мембраны (ПВХ/ТПО/EPDM)
+                        li толщина материала (1.2 / 1.5 / 1.8 мм)
+                        li состояние основания и необходимость демонтировать старую кровлю
+                        li количество примыканий и сложных узлов
+                        li высота здания и доступ к объекту
+
+            .cost-product__cards
+                .cost-product__headline Ориентировочные цены:
+
+                .cost-product__group
+                    .cost-product__card.glass
+                        .glass-filter
+                        .glass-overlay
+                        .glass-specular
+
+                        .glass-content
+                            .cost-product__card-caption Монтаж ПВХ-мембраны
+                            .cost-product__card-value от 950 руб/м²
+
+                    .cost-product__card.glass
+                        .glass-filter
+                        .glass-overlay
+                        .glass-specular
+
+                        .glass-content
+                            .cost-product__card-caption Монтаж ТПО-мембраны
+                            .cost-product__card-value от 1100 руб/м²
+
+                    .cost-product__card.glass
+                        .glass-filter
+                        .glass-overlay
+                        .glass-specular
+
+                        .glass-content
+                            .cost-product__card-caption Монтаж EPDM
+                            .cost-product__card-value от 1300 руб/м²
+
+                    .cost-product__card.glass
+                        .glass-filter
+                        .glass-overlay
+                        .glass-specular
+
+                        .glass-content
+                            .cost-product__card-caption Примыкания/воронки
+                            .cost-product__card-value от 500 руб/шт
+
+                    .cost-product__card.glass
+                        .glass-filter
+                        .glass-overlay
+                        .glass-specular
+
+                        .glass-content
+                            .cost-product__card-caption Утепление PIR
+                            .cost-product__card-value от 450 руб/м²
+
+                .cost-product__actions
+                    a.btn.btn--light.btn--arrow-right(href="#modal-feedback" data-fancybox) Заказать расчет
+
+                .cost-product__img--wrap
+                    img.cost-product__img(src="img/content/cost-product/img.webp" width="1033" height="1033" alt="Стоимость мембранной кровли")
 
     section.section
         .section__head
@@ -149,6 +275,15 @@ block content
 
                                 .features__card-info
                                     .features__card-title= card.name
+
+        .tech-panel.mt-2.-option-1-
+            .tech-panel__info
+                h3.tech-panel__title Наша цель
+
+                .tech-panel__text.text Чтобы кровля служила максимально долго без ремонтов.
+
+            .tech-panel__img--wrap
+                img.tech-panel__img(src="img/content/tech-panel/img_1.webp" width="520" height="520" alt="Наша цель")
 
     section.section
         .section__head

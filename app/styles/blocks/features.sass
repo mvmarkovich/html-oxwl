@@ -84,6 +84,17 @@
             &:before
                 content: counter(count) ' '
 
+            &.-first-zero-
+                border: none
+                padding: 0
+                min-height: 1px
+                border-radius: 0
+                margin-bottom: 20px
+                text: 500 20px 1.25 @md 22px 1.14
+                
+                &:before
+                    content: counter(count, decimal-leading-zero)
+
         .btn--arrow-right
             width: @sm-down 100%
             margin-top: auto

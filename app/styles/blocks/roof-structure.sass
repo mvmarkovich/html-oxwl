@@ -1,0 +1,62 @@
+.roof-structure
+    position: relative
+    z-index: 1
+    background: #192741
+    border-radius: 15px
+    padding: 16px 32px 24px @lg 0
+    overflow: hidden
+
+    &__logo-back
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100%
+        min-width: 728px
+        z-index: -1
+
+    &__img
+        &--wrap
+            position: relative
+            padding-top: @sm 60% @lg 53%
+            overflow: hidden
+            width: 146% @sm 100% @lg 82%
+            margin: @sm 0 auto
+            transform: translateX(-50%) @sm none @lg translateX(-32px)
+
+            margin-top: @sm-down -32px
+            left: @sm-down 50%
+            margin-left: @sm-down -32px
+            max-width: @sm-down 600px
+            
+
+            img, source
+                position: @sm absolute 0 null null 0
+                width: 100%
+            
+    &__list
+        list-style: none
+        padding: 0
+        margin: -20px 0 -16px @sm 40px 0 0
+        column-count: @sm 2
+        column-gap: @sm 16px
+        counter-reset: count
+
+        display: @lg none
+
+        &-item
+            color: #fff
+            text: 500 14px 1.3
+            margin-bottom: 16px
+            display: flex 
+            counter-increment: count
+
+            &:before
+                content: counter(count, decimal-leading-zero)
+                color: rgba(255, 255, 255, .5)
+                text: 500 16px 1.2
+                margin-right: 16px
+                min-width: 20px
+
+        
+        
